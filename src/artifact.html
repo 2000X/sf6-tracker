@@ -29,7 +29,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 .wrap{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
 h1,h2{margin:0;text-wrap:balance}
 .masthead{display:flex;flex-direction:column;gap:10px;padding-top:8px}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);max-width:100%}
+.eyebrow.fit{white-space:nowrap}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,8vw,64px);line-height:.95;letter-spacing:.01em}
 h1 .cn{font-family:var(--body);font-weight:800;font-size:.62em;letter-spacing:0;margin-left:.2em}
 h1 .slash{color:var(--accent)}
@@ -38,7 +39,6 @@ h1 .slash{color:var(--accent)}
 .brief b{color:var(--accent);font-weight:700;margin-right:6px}
 
 .next{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--ink);color:var(--bg);border-radius:14px;padding:20px 22px;position:relative;overflow:hidden}
-.next::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border:14px solid var(--accent);border-radius:50%;opacity:.35}
 .next .count{font-family:var(--display);font-size:72px;line-height:.9;color:var(--accent)}
 .next .count small{font-family:var(--body);font-size:15px;font-weight:700;color:var(--bg);margin-left:4px}
 .next .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
@@ -322,6 +322,25 @@ footer a{color:var(--muted)}
     if (!L.length) lg.append(el("li","empty","暂无记录。"));
     L.forEach(x=>{ const li=el("li"); li.append(el("time",null,x.date||""), el("div",null,x.text||"")); lg.append(li); });
   }
+
+
+  // 顶部赛季行：先收紧字间距，再微缩字号，尽量保持一行
+  (function fitEyebrow(){
+    const e = document.querySelector(".eyebrow");
+    if (!e) return;
+    function fit(){
+      e.style.letterSpacing = ""; e.style.fontSize = "";
+      e.classList.add("fit");
+      const over = () => e.scrollWidth > e.clientWidth + 0.5;
+      let ls = 0.12, fs = 12;
+      while (over() && ls > 0){ ls = Math.max(0, +(ls - 0.01).toFixed(2)); e.style.letterSpacing = ls + "em"; }
+      while (over() && fs > 10){ fs -= 0.5; e.style.fontSize = fs + "px"; }
+      if (over()) e.classList.remove("fit");
+    }
+    fit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    let t; window.addEventListener("resize", ()=>{ clearTimeout(t); t = setTimeout(fit, 100); });
+  })();
 
   document.querySelectorAll(".filters button").forEach(btn=>{
     btn.addEventListener("click", ()=>{

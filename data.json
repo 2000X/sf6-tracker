@@ -1,0 +1,288 @@
+{
+ "status": {
+  "brief": "9/26 亚运会格斗项目决赛，韩国 5-2 击败日本夺金。下一站是 10/9–11 的 EVO France 2026（法国尼斯），这是本季最后一场 CPT Premier。",
+  "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
+  "lastUpdated": "2026-09-28 21:25",
+  "log": [
+   {
+    "date": "2026-09-28",
+    "text": "未开赛项目加上日本观赛时间：EVO France SF6 决赛预估为 10/12（一）凌晨 1 点左右；Capcom Cup 13 分日赛程。"
+   },
+   {
+    "date": "2026-09-28",
+    "text": "建立追踪页：收录 CPT 2026 已结束的 7 场 Premier、EWC 2026、Topanga 7、亚运会格斗项目，以及 EVO France、World Warrior 区域决赛和 Capcom Cup 13 的赛程。"
+   }
+  ],
+  "qualified": [
+   {
+    "player": "Sahara",
+    "via": "Capcom Cup 12 冠军"
+   },
+   {
+    "player": "Yamaguchi",
+    "via": "EVO Japan 2026 冠军"
+   },
+   {
+    "player": "Xiaohai",
+    "via": "Combo Breaker 2026 冠军"
+   },
+   {
+    "player": "MenaRD",
+    "via": "Blink Respawn 2026 冠军"
+   },
+   {
+    "player": "Hinao",
+    "via": "BAM 16 冠军"
+   },
+   {
+    "player": "Craime",
+    "via": "EWC 2026 冠军"
+   },
+   {
+    "player": "Tokido",
+    "via": "CEO 2026 冠军（此前已获资格）"
+   },
+   {
+    "player": "Booce Lee",
+    "via": "CEO 2026 名额顺延"
+   },
+   {
+    "player": "NoahTheProdigy",
+    "via": "UFA 2026 冠军"
+   },
+   {
+    "player": "EVO 2026 名额",
+    "tbd": true,
+    "via": "MenaRD 已有资格，顺延对象待确认"
+   },
+   {
+    "player": "EVO France 2026 冠军",
+    "tbd": true,
+    "via": "10/11 决出"
+   }
+  ],
+  "totalSlots": 48
+ },
+ "events": {
+  "asian-games-2026": {
+   "champion": "韩国",
+   "city": "爱知 常滑",
+   "end": "2026-09-26",
+   "kind": "team",
+   "link": "https://www.koreatimes.co.kr/sports/20260926/s-korea-wins-gold-in-esports-fighting-games-at-asian-games",
+   "name": "亚运会 2026 格斗项目",
+   "note": "SF6、铁拳8、KOF15 三项目国家团体赛；日本队 SF6 选手为 Higuchi，铜牌为沙特与中国香港。",
+   "runnerUp": "日本",
+   "score": "决赛 5-2",
+   "start": "2026-09-25",
+   "venue": "Aichi Sky Expo"
+  },
+  "bam-16": {
+   "champion": "Hinao",
+   "city": "澳大利亚 墨尔本",
+   "end": "2026-07-12",
+   "entrants": 230,
+   "kind": "premier",
+   "link": "https://sf.esports.capcom.com/cpt-news/c15962/",
+   "name": "BAM 16",
+   "note": "15 岁的 Hinao 拿下生涯第二个 Premier 冠军。",
+   "runnerUp": "Cosa",
+   "start": "2026-07-10",
+   "venue": "Battle Arena Melbourne"
+  },
+  "blink-respawn-2026": {
+   "champion": "MenaRD",
+   "championChar": "(Blanka)",
+   "city": "多米尼加 圣多明各",
+   "end": "2026-06-07",
+   "entrants": 316,
+   "kind": "premier",
+   "link": "https://sf.esports.capcom.com/cpt-news/c15944/",
+   "name": "Blink Respawn 2026",
+   "note": "MenaRD 在主场从败者组打回夺冠。",
+   "prize": "$11,200",
+   "runnerUp": "NoahTheProdigy",
+   "runnerUpChar": "(Luke)",
+   "score": "GF 重置后夺冠",
+   "start": "2026-06-05",
+   "venue": "Sambil Santo Domingo"
+  },
+  "capcom-cup-13": {
+   "city": "东京",
+   "end": "2027-03-14",
+   "entrants": 48,
+   "kind": "final",
+   "link": "https://sf.esports.capcom.com/capcomcup/cc13/en/",
+   "name": "Capcom Cup 13 / SFL 世界赛 2026",
+   "preview": "48 人争夺年度世界冠军；同场举行 SFL 世界锦标赛",
+   "start": "2027-03-10",
+   "stream": "Capcom Fighters JP",
+   "venue": "两国国技馆",
+   "watch": [
+    {
+     "what": "小组赛第一阶段",
+     "when": "3/10（三）–3/11（四）"
+    },
+    {
+     "what": "小组赛第二阶段",
+     "when": "3/12（五）"
+    },
+    {
+     "key": true,
+     "what": "16 强到总决赛",
+     "when": "3/13（六）"
+    }
+   ],
+   "watchNote": "比赛就在东京，时间即日本时间；每日开赛时刻待官方公布。"
+  },
+  "ceo-2026": {
+   "champion": "Tokido",
+   "championChar": "(JP)",
+   "city": "美国 奥兰多",
+   "end": "2026-08-16",
+   "entrants": 1100,
+   "kind": "premier",
+   "link": "https://liquipedia.net/fighters/Community_Effort_Orlando/2026/SF6",
+   "name": "CEO 2026",
+   "note": "Tokido 已有 Capcom Cup 13 资格，名额顺延给亚军 Booce Lee。",
+   "runnerUp": "Booce Lee",
+   "runnerUpChar": "(Terry)",
+   "start": "2026-08-14",
+   "venue": "Rosen Shingle Creek"
+  },
+  "combo-breaker-2026": {
+   "champion": "Xiaohai",
+   "championChar": "(Mai / M. Bison)",
+   "city": "美国 Schaumburg, IL",
+   "end": "2026-05-24",
+   "entrants": 1452,
+   "kind": "premier",
+   "link": "https://liquipedia.net/fighters/Combo_Breaker/2026/SF6",
+   "name": "Combo Breaker 2026",
+   "runnerUp": "Hinao",
+   "runnerUpChar": "(Sagat)",
+   "score": "GF 3-1，重置 3-0（败者组上来）",
+   "start": "2026-05-22",
+   "venue": "Schaumburg Convention Center"
+  },
+  "cpt-ww-finals-2026": {
+   "city": "线上 · 25 个赛区",
+   "end": "2026-12-13",
+   "kind": "online",
+   "name": "CPT World Warrior 区域决赛",
+   "note": "智利、美加西部等赛区 11/15 开打，日本与美加东部 12/13 收官。",
+   "preview": "每个赛区冠军获得 Capcom Cup 13 名额",
+   "start": "2026-11-15",
+   "stream": "Capcom Fighters / Capcom Fighters JP",
+   "watch": [
+    {
+     "what": "各赛区决赛陆续进行，具体时段待公布",
+     "when": "11/15（日）起"
+    },
+    {
+     "key": true,
+     "what": "日本赛区决赛",
+     "when": "12/13（日）时间待公布"
+    }
+   ],
+   "watchNote": "日本赛区常规赛多在中午 12:00 开始，区域决赛时间以官方公布为准。"
+  },
+  "evo-2026": {
+   "champion": "MenaRD",
+   "championChar": "(Blanka)",
+   "city": "美国 拉斯维加斯",
+   "end": "2026-06-28",
+   "kind": "premier",
+   "link": "https://www.start.gg/tournament/evo-2026/event/street-fighter-6",
+   "name": "EVO 2026",
+   "note": "MenaRD 卫冕，第四个 EVO 冠军。",
+   "runnerUp": "Shigematsu",
+   "runnerUpChar": "(Blanka)",
+   "start": "2026-06-26",
+   "venue": "Las Vegas Convention Center"
+  },
+  "evo-france-2026": {
+   "city": "法国 尼斯",
+   "end": "2026-10-11",
+   "kind": "premier",
+   "link": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/France",
+   "name": "EVO France 2026",
+   "note": "2025 年 SF6 项目 1,669 人参赛；今年报名数仍居全项目第一。",
+   "preview": "本季最后一场 CPT Premier，冠军直通 Capcom Cup 13",
+   "start": "2026-10-09",
+   "stream": "EVO 官方 Twitch / YouTube",
+   "venue": "Palais des Expos de Nice",
+   "watch": [
+    {
+     "tentative": true,
+     "what": "预选赛（Pools）开打",
+     "when": "10/9（五）21:00 起"
+    },
+    {
+     "key": true,
+     "tentative": true,
+     "what": "SF6 Top 8 决赛",
+     "when": "10/12（一）01:00 左右"
+    }
+   ],
+   "watchNote": "官方还没公布 SF6 时段，按 2025 年同赛事时间推算（法国夏令时，比日本慢 7 小时）；决赛在周日晚，日本是周一凌晨。"
+  },
+  "evo-japan-2026": {
+   "champion": "Yamaguchi",
+   "championChar": "(Mai)",
+   "city": "东京",
+   "end": "2026-05-03",
+   "entrants": 7168,
+   "kind": "premier",
+   "link": "https://evo.gg/news/evo-japan-2026-recap/",
+   "name": "EVO Japan 2026",
+   "note": "单一格斗游戏史上最大规模赛事（吉尼斯认证）；Yamaguchi 胜者组一局未败夺冠。",
+   "runnerUp": "Punk",
+   "runnerUpChar": "(Cammy)",
+   "score": "GF 3-1",
+   "start": "2026-05-01",
+   "venue": "Tokyo Big Sight"
+  },
+  "ewc-2026": {
+   "champion": "Craime",
+   "championChar": "(Ryu / M. Bison)",
+   "city": "法国 巴黎",
+   "end": "2026-08-01",
+   "entrants": 32,
+   "kind": "major",
+   "link": "https://liquipedia.net/fighters/Esports_World_Cup/2026/SF6",
+   "name": "Esports World Cup 2026",
+   "note": "15 岁的 Craime 成为 EWC 史上最年轻冠军，获 $250,000 与 Capcom Cup 13 名额。",
+   "prize": "$1,000,000",
+   "runnerUp": "Hibiki",
+   "start": "2026-07-29",
+   "venue": "Paris Expo Porte de Versailles"
+  },
+  "topanga-7": {
+   "champion": "MenaRD",
+   "city": "东京",
+   "end": "2026-08-23",
+   "entrants": 36,
+   "kind": "invitational",
+   "name": "Topanga Championship 7",
+   "prize": "约 $94,000",
+   "runnerUp": "Higuchi",
+   "start": "2026-06-10"
+  },
+  "ufa-2026": {
+   "champion": "NoahTheProdigy",
+   "championChar": "(Luke)",
+   "city": "法国 巴黎",
+   "end": "2026-09-13",
+   "entrants": 512,
+   "kind": "premier",
+   "link": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2026/SF6",
+   "name": "Ultimate Fighting Arena 2026",
+   "prize": "约 $10,800",
+   "runnerUp": "Higuchi",
+   "runnerUpChar": "(Guile)",
+   "score": "GF 3-0，重置 3-1（败者组上来）",
+   "start": "2026-09-11"
+  }
+ }
+}

@@ -2,8 +2,12 @@
  "status": {
   "brief": "9/26 亚运会格斗项目决赛，韩国 5-2 击败日本夺金。下一站是 10/9–11 的 EVO France 2026（法国尼斯），这是本季最后一场 CPT Premier。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-09-28 21:25",
+  "lastUpdated": "2026-09-28 22:10",
   "log": [
+   {
+    "date": "2026-09-28",
+    "text": "更新频率改为每周一、周四早上 08:50；Capcom Cup 13 期间（3/10–14）每晚加更一次。"
+   },
    {
     "date": "2026-09-28",
     "text": "未开赛项目加上日本观赛时间：EVO France SF6 决赛预估为 10/12（一）凌晨 1 点左右；Capcom Cup 13 分日赛程。"

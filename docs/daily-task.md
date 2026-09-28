@@ -1,20 +1,29 @@
-# 每日定时任务
+# 定时更新任务
 
 | 项目 | 设置 |
 |---|---|
-| 名称 | SF6 赛事每日更新 |
-| 时间 | 每天 08:50（日本时间），`CRON_TZ=Asia/Tokyo 50 8 * * *` |
+| 名称 | SF6 赛事定期更新 |
+| 时间 | 每周一、周四 08:50（日本时间），`CRON_TZ=Asia/Tokyo 50 8 * * 1,4` |
 | 运行位置 | 云端，不需要开着电脑 |
 | 通知 | 手机推送 |
 | 任务 ID | `trig_01Qp4ubLybmUDpDCsQMkBV46` |
-| 审批 | 默认每次写入前需要批准；可在该定时任务的设置里打开 Automatically approve 改为全自动 |
+| 模型 | Sonnet |
+| 审批 | 自动批准（Automatically approve 已打开） |
 
 每次运行都是全新会话，不记得之前的对话，所以下面的指令写得完整独立。修改任务时，先改这里，再把全文同步到定时任务。
+
+## Capcom Cup 13 周加更
+
+| 项目 | 设置 |
+|---|---|
+| 名称 | SF6 Capcom Cup 13 周晚间更新 |
+| 时间 | 3/10–3/14 每晚 23:50（日本时间），`CRON_TZ=Asia/Tokyo 50 23 10-14 3 *` |
+| 说明 | 指令与下方相同，但开头加了日期检查：不在 2027-03-10 至 2027-03-14 之间就直接结束。CC13 结束后可以删除这个任务 |
 
 ## 完整指令
 
 ```text
-每日任务：更新「SF6 大赛追踪」（街霸6 Street Fighter 6 大型赛事追踪）。用户在日本（Asia/Tokyo），使用中文，内容全部用简体中文书写（选手名、赛事名保持英文原名）。同一份数据要更新到两个地方：
+定期任务（每周一、周四早上运行）：更新「SF6 大赛追踪」（街霸6 Street Fighter 6 大型赛事追踪）。用户在日本（Asia/Tokyo），使用中文，内容全部用简体中文书写（选手名、赛事名保持英文原名）。同一份数据要更新到两个地方：
 - A. Claude 页面：https://claude.ai/artifact/6KshnNYxxiUb2c2cew77vJ （数据在页面自带的数据库里，用 ArtifactData 工具读写，需要时先用 ToolSearch 加载 "select:ArtifactData"；不需要重新发布页面）
 - B. 公开网站：https://2000x.github.io/sf6-tracker/ （GitHub 仓库 2000X/sf6-tracker，网站读取仓库根目录的 data.json；不要改 index.html）
 
@@ -34,7 +43,7 @@
 ## 每次运行的步骤
 1. 用 ArtifactData list 读取 `events`（limit 100）和 get `meta/status`，记下各文档的 version。
 2. 用 WebSearch/WebFetch 检索最新信息（今天日期请用 current_time 工具获取）：
-   - 最近 3 天内结束或正在进行的 SF6 大型赛事结果（CPT Premier、EVO 系列、EWC、Red Bull Kumite、Topanga、SFL、各大 Tier 1 线下赛），冠亚军、使用角色、决赛比分、参赛人数。
+   - 上次运行以来（最近 5 天内）结束或正在进行的 SF6 大型赛事结果（CPT Premier、EVO 系列、EWC、Red Bull Kumite、Topanga、SFL、各大 Tier 1 线下赛），冠亚军、使用角色、决赛比分、参赛人数。
    - 未来 3 个月内赛事的官方赛程/直播时间表（SF6 预选、Top 8 的开始时间和时区），换算成日本时间写入 watch；日期/地点变动；新公布的大型赛事（新加入的赛事同样要写 watch）。
    - Capcom Cup 13 新确认的名额（Premier 冠军、名额顺延、Premier 积分榜名额、World Warrior 区域决赛冠军、SFL 世界赛相关）。
    来源优先：sf.esports.capcom.com、liquipedia.net/fighters、start.gg、evo.gg、eventhubs、shacknews、esports.gg。只写有来源支持的事实，不确定的内容标成待确认/预估或不写。
@@ -42,7 +51,7 @@
 4. 同步到网站：
    a. 用 mcp__claude-code-remote__add_repo（owner "2000X", repo "sf6-tracker", access "push"）把仓库加入本次会话，按它返回的说明 clone（git clone --depth 1）。
    b. 再用 ArtifactData 把 `events`（out_dir 设为 <仓库>/export）和 `meta/status`（同一个 out_dir）导出成文件，运行 `python3 scripts/build_data.py export` 生成新的 data.json，再运行 `python3 scripts/check_data.py`，有错误先修正数据库再重新生成。export/ 已在 .gitignore 里，不要提交。
-   c. git config user.name Claude；git config user.email noreply@anthropic.com；提交信息写 "Daily update YYYY-MM-DD"，末尾加两行：
+   c. git config user.name Claude；git config user.email noreply@anthropic.com；提交信息写 "Update YYYY-MM-DD"，末尾加两行：
       Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
       （空行后即可，不要加其他署名）
       然后 git push origin HEAD:main。只改 data.json。

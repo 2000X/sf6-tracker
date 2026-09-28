@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# 数据库临时导出目录
+export/

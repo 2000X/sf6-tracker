@@ -53,6 +53,18 @@ h1 .slash{color:var(--accent)}
 .next .sub{font-size:13px;opacity:.8}
 .next > *{position:relative;z-index:1}
 
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.next:not([hidden]) + .road{margin-top:-18px}
+.rd{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
+.rd.nodate{grid-template-columns:1fr}
+.rd .rc{font-family:var(--display);font-size:40px;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
+.rd .rc small{font-family:var(--body);font-size:13px;font-weight:700;color:var(--muted);margin-left:3px}
+.rd.bal .rc{color:var(--cobalt)}
+.rd .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rd .nm{font-size:17px;font-weight:800;line-height:1.3;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.rd a.nm:hover{color:var(--accent)}
+.rd .sub{font-size:13px;color:var(--muted)}
+
 section{display:flex;flex-direction:column;gap:12px}
 .sechead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px}
 h2{font-size:18px;font-weight:800}
@@ -132,6 +144,8 @@ footer a{color:var(--muted)}
   </header>
 
   <div class="next" id="next" hidden></div>
+
+  <div class="road" id="road" role="group" aria-label="角色追加与版本调整" hidden></div>
 
   <section aria-labelledby="h-sched">
     <div class="sechead">
@@ -262,8 +276,42 @@ footer a{color:var(--muted)}
     } else box.hidden = true;
   }
 
+  function renderRoad(){
+    const box = $("#road"), R = (status && status.roadmap) || {};
+    const isDate = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d || "");
+    const cards = [];
+    function card(kind, label, item, fallbackName, verb){
+      const has = isDate(item.date);
+      const c = el("div", "rd " + kind + (has ? "" : " nodate"));
+      if (has){
+        const n = days(todayJST(), item.date);
+        const rc = el("div","rc");
+        if (n > 0){ rc.textContent = String(n); rc.append(el("small",null,"天")); }
+        else rc.textContent = n === 0 ? "TODAY" : "OUT";
+        c.append(rc);
+      }
+      const info = el("div");
+      info.append(el("div","lbl", label));
+      const name = item.name || fallbackName;
+      if (item.link && /^https:\/\//.test(item.link)){ const a = el("a","nm",name); a.href=item.link; a.target="_blank"; a.rel="noopener"; info.append(a); }
+      else info.append(el("div","nm", name));
+      if (has){
+        const n = days(todayJST(), item.date);
+        const when = md(item.date) + " " + (n > 0 ? verb : n === 0 ? "今天" + verb : "已" + verb);
+        info.append(el("div","sub", [when, item.note].filter(Boolean).join(" · ")));
+      }
+      c.append(info);
+      return c;
+    }
+    if (R.character && R.character.name) cards.push(card("chr", "下一位追加角色", R.character, "", "上线"));
+    if (R.balance && isDate(R.balance.date)) cards.push(card("bal", "下次版本调整", R.balance, "平衡性调整", "实装"));
+    box.replaceChildren(...cards);
+    box.hidden = cards.length === 0;
+  }
+
   function renderStatus(){
     if (!status) return;
+    renderRoad();
     $("#updated").textContent = status.lastUpdated ? "最后更新：" + status.lastUpdated + " (JST)" : "";
     const b = $("#brief");
     if (status.brief){ b.replaceChildren(el("b",null,"今日要点"), document.createTextNode(status.brief)); b.hidden=false; } else b.hidden = true;

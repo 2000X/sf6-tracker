@@ -58,3 +58,16 @@
 | `totalSlots` | 名额总数，48 |
 | `qualified` | 数组 `{player, via, tbd?}`，`tbd: true` 为待确认名额 |
 | `log` | 数组 `{date, text}`，最新在最前，最多 30 条 |
+| `roadmap` | 下一次角色追加与版本调整，见下 |
+
+### meta/status.roadmap
+
+显示在页面顶部「下一站」卡片下方。
+
+| 字段 | 说明 |
+|---|---|
+| `character` | 下一位追加角色 `{name, date, note, link}`。`date` 为官方公布的上线日期，未公布时为 `null`，页面只显示角色名 |
+| `balance` | 下一次平衡性/版本调整 `{name?, date, note, link}`。只有 `date` 是官方公布的具体日期时页面才显示这一项 |
+| `checked` | 最后核对日期 `YYYY-MM-DD` |
+
+`date` 按日本时间写 `YYYY-MM-DD`；`link` 必须是 `https://` 链接。上线当天显示「今天上线」，过期后显示「已上线」，应在下次更新时换成下一位。

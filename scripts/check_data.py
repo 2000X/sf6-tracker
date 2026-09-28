@@ -33,6 +33,25 @@ def check(data):
         if not q.get("player"):
             errors.append(f"qualified 有一项缺少 player：{q}")
 
+    roadmap = status.get("roadmap")
+    if roadmap is not None:
+        if not isinstance(roadmap, dict):
+            errors.append("status.roadmap 应为对象")
+            roadmap = {}
+        for key in ("character", "balance"):
+            item = roadmap.get(key)
+            if item is None:
+                continue
+            if not isinstance(item, dict):
+                errors.append(f"roadmap.{key} 应为对象")
+                continue
+            if item.get("date") is not None and not DATE.match(str(item["date"])):
+                errors.append(f"roadmap.{key}.date 应为 YYYY-MM-DD 或 null")
+            if item.get("link") and not str(item["link"]).startswith("https://"):
+                errors.append(f"roadmap.{key}.link 必须是 https:// 链接")
+        if isinstance(roadmap.get("character"), dict) and not roadmap["character"].get("name"):
+            errors.append("roadmap.character 缺少 name")
+
     for doc_id, ev in events.items():
         where = f"events/{doc_id}"
         if not DOC_ID.match(doc_id):

@@ -2,8 +2,12 @@
  "status": {
   "brief": "9/26 亚运会格斗项目决赛，韩国 5-2 击败日本夺金。下一站是 10/9–11 的 EVO France 2026（法国尼斯），这是本季最后一场 CPT Premier。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-09-28 22:10",
+  "lastUpdated": "2026-09-28 22:40",
   "log": [
+   {
+    "date": "2026-09-28",
+    "text": "顶部新增「下一位追加角色 / 下次版本调整」：Arjun 将于 10/13 上线；下次平衡调整官方尚未公布日期，暂不显示。"
+   },
    {
     "date": "2026-09-28",
     "text": "更新频率改为每周一、周四早上 08:50；Capcom Cup 13 期间（3/10–14）每晚加更一次。"
@@ -65,6 +69,19 @@
     "via": "10/11 决出"
    }
   ],
+  "roadmap": {
+   "balance": {
+    "date": null,
+    "note": "官方尚未公布下次平衡调整日期（上次为 8/3 随 Yasmine 上线的全角色调整）"
+   },
+   "character": {
+    "date": "2026-10-13",
+    "link": "https://store.steampowered.com/news/app/1364780/view/676256891013169832",
+    "name": "Arjun",
+    "note": "Year 4 第 2 位角色"
+   },
+   "checked": "2026-09-28"
+  },
   "totalSlots": 48
  },
  "events": {

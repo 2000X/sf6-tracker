@@ -1,9 +1,13 @@
 {
  "status": {
-  "brief": "9/26 亚运会格斗项目决赛，韩国 5-2 击败日本夺金。下一站是 10/9–11 的 EVO France 2026（法国尼斯），这是本季最后一场 CPT Premier。",
+  "brief": "9/26 亚运会格斗项目收官，韩国夺金；下一站是 10/9–11 的 EVO France 2026（法国尼斯，本季最后一场 CPT Premier），SF6 最终报名 1,071 人仍列全项目第一。10/24 伦敦还有 SFL EMEAA 赛区季后赛。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-09-28 22:40",
+  "lastUpdated": "2026-10-01 08:53",
   "log": [
+   {
+    "date": "2026-09-30",
+    "text": "确认 EVO 2026 亚军 Shigematsu 顺延获得 Capcom Cup 13 名额（冠军 MenaRD 已持资格）；EVO France 2026 报名截止，SF6 最终 1,071 人仍列全项目第一；新增 SFL EMEAA（10/24 伦敦）/ Americas（11/8 帕萨迪纳）赛区季后赛及观赛时间。"
+   },
    {
     "date": "2026-09-28",
     "text": "顶部新增「下一位追加角色 / 下次版本调整」：Arjun 将于 10/13 上线；下次平衡调整官方尚未公布日期，暂不显示。"
@@ -59,9 +63,8 @@
     "via": "UFA 2026 冠军"
    },
    {
-    "player": "EVO 2026 名额",
-    "tbd": true,
-    "via": "MenaRD 已有资格，顺延对象待确认"
+    "player": "Shigematsu",
+    "via": "EVO 2026 亚军，名额顺延（冠军 MenaRD 已持有资格）"
    },
    {
     "player": "EVO France 2026 冠军",
@@ -80,7 +83,7 @@
     "name": "Arjun",
     "note": "Year 4 第 2 位角色"
    },
-   "checked": "2026-09-28"
+   "checked": "2026-09-30"
   },
   "totalSlots": 48
  },
@@ -213,6 +216,7 @@
    "championChar": "(Blanka)",
    "city": "美国 拉斯维加斯",
    "end": "2026-06-28",
+   "entrants": 2416,
    "kind": "premier",
    "link": "https://www.start.gg/tournament/evo-2026/event/street-fighter-6",
    "name": "EVO 2026",
@@ -225,10 +229,11 @@
   "evo-france-2026": {
    "city": "法国 尼斯",
    "end": "2026-10-11",
+   "entrants": 1071,
    "kind": "premier",
    "link": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/France",
    "name": "EVO France 2026",
-   "note": "2025 年 SF6 项目 1,669 人参赛；今年报名数仍居全项目第一。",
+   "note": "2025 年 SF6 项目 1,669 人参赛；2026 年最终报名 1,071 人，仍为全项目人数最多的游戏。",
    "preview": "本季最后一场 CPT Premier，冠军直通 Capcom Cup 13",
    "start": "2026-10-09",
    "stream": "EVO 官方 Twitch / YouTube",
@@ -278,6 +283,31 @@
    "runnerUp": "Hibiki",
    "start": "2026-07-29",
    "venue": "Paris Expo Porte de Versailles"
+  },
+  "sfl-playoffs-2026": {
+   "city": "英国伦敦 / 美国帕萨迪纳",
+   "end": "2026-11-09",
+   "kind": "team",
+   "link": "https://www.streetfighterleague.com/street-fighter-league-emeaa-2026-playoffs-head-to-mcm-comic-con-london/",
+   "name": "Street Fighter League 2026 赛区季后赛（EMEAA / Americas）",
+   "note": "EMEAA 四强队伍：GTW、Red Dunes、MVS、YESPORTS；Americas 赛区晋级队伍待定。",
+   "preview": "各赛区季后赛冠军队伍晋级 2027年3月的 SFL 世界锦标赛（与 Capcom Cup 13 同期在两国国技馆举行）",
+   "start": "2026-10-24",
+   "stream": "Capcom Fighters 官方 Twitch / YouTube",
+   "venue": "MCM Comic Con London（ExCeL London） / Anime Pasadena（Civic Auditorium）",
+   "watch": [
+    {
+     "key": true,
+     "what": "SFL EMEAA 2026 季后赛（半决赛+决赛）",
+     "when": "10/24（六）20:00 起"
+    },
+    {
+     "tentative": true,
+     "what": "SFL Americas 2026 决赛",
+     "when": "11/9（一）11:30 左右"
+    }
+   ],
+   "watchNote": "EMEAA 决赛为伦敦当地时间 10/24 12:00–18:00（BST，比日本慢 8 小时），换算为日本时间 10/24 20:00–次日 2:00；Americas 决赛为美国太平洋标准时间 11/8 18:30 开打（11 月初已转冬令时），日本时间早 17 小时，即 11/9（一）11:30 左右，具体以官方公布为准。"
   },
   "topanga-7": {
    "champion": "MenaRD",

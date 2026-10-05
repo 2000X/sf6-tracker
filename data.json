@@ -1,9 +1,13 @@
 {
  "status": {
-  "brief": "9/26 亚运会格斗项目收官，韩国夺金；下一站是 10/9–11 的 EVO France 2026（法国尼斯，本季最后一场 CPT Premier），SF6 最终报名 1,071 人仍列全项目第一。10/24 伦敦还有 SFL EMEAA 赛区季后赛。",
+  "brief": "下一站 EVO France 2026（法国尼斯，10/9–11，本季最后一场 CPT Premier），决赛预估日本时间 10/12（一）凌晨 1 点左右；World Warrior 区域决赛已开打，Asia South 冠军 BD|Si Anik 锁定 Capcom Cup 13 名额。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-10-01 08:53",
+  "lastUpdated": "2026-10-05 08:54",
   "log": [
+   {
+    "date": "2026-10-05",
+    "text": "World Warrior 区域决赛开打：Asia South 赛区冠军 BD|Si Anik 锁定 Capcom Cup 13 名额；其余 24 个赛区决赛时间表公布，10/17 起分批进行，日本赛区 12/13 收官。已核对 EVO France、SFL EMEAA/Americas 赛程与名额，暂无变化。"
+   },
    {
     "date": "2026-09-30",
     "text": "确认 EVO 2026 亚军 Shigematsu 顺延获得 Capcom Cup 13 名额（冠军 MenaRD 已持资格）；EVO France 2026 报名截止，SF6 最终 1,071 人仍列全项目第一；新增 SFL EMEAA（10/24 伦敦）/ Americas（11/8 帕萨迪纳）赛区季后赛及观赛时间。"
@@ -67,6 +71,10 @@
     "via": "EVO 2026 亚军，名额顺延（冠军 MenaRD 已持有资格）"
    },
    {
+    "player": "BD|Si Anik",
+    "via": "World Warrior Asia South 赛区冠军"
+   },
+   {
     "player": "EVO France 2026 冠军",
     "tbd": true,
     "via": "10/11 决出"
@@ -83,7 +91,7 @@
     "name": "Arjun",
     "note": "Year 4 第 2 位角色"
    },
-   "checked": "2026-09-30"
+   "checked": "2026-10-05"
   },
   "totalSlots": 48
  },
@@ -194,14 +202,15 @@
    "end": "2026-12-13",
    "kind": "online",
    "name": "CPT World Warrior 区域决赛",
-   "note": "智利、美加西部等赛区 11/15 开打，日本与美加东部 12/13 收官。",
+   "note": "Asia South 赛区已决出冠军 BD|Si Anik（Mai/Ryu）；其余 24 个赛区决赛分批于 10/17–12/13 进行，日本赛区 12/13 收官。",
    "preview": "每个赛区冠军获得 Capcom Cup 13 名额",
-   "start": "2026-11-15",
+   "start": "2026-10-02",
    "stream": "Capcom Fighters / Capcom Fighters JP",
    "watch": [
     {
-     "what": "各赛区决赛陆续进行，具体时段待公布",
-     "when": "11/15（日）起"
+     "tentative": true,
+     "what": "25 个赛区决赛分批进行：Asia South 已完赛，10/17 起 Brazil、Mexico 等赛区陆续开打",
+     "when": "10/17（六）起"
     },
     {
      "key": true,
@@ -209,7 +218,7 @@
      "when": "12/13（日）时间待公布"
     }
    ],
-   "watchNote": "日本赛区常规赛多在中午 12:00 开始，区域决赛时间以官方公布为准。"
+   "watchNote": "各赛区决赛分散在当地时间进行，多数无日语转播；日本赛区决赛具体时段官方未公布，此处为日期占位。"
   },
   "evo-2026": {
    "champion": "MenaRD",

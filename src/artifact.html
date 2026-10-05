@@ -143,6 +143,21 @@ h2 .en{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:
 .more[open] summary::before{content:"▾"}
 .more summary:hover{color:var(--ink)}
 .more .log{margin-top:10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--muted)}
+.fact .v{font-weight:800;font-size:16px;line-height:1.3}
+.fact .s{font-size:12px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.tl li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}
+.tl .w{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;line-height:1.5}
+.tl .t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tl .row1{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tl .wh{font-weight:700}
+.tl .nt{font-size:13px;color:var(--muted);max-width:60ch}
+.st-set{background:var(--live-soft);color:var(--live)}
+.st-est{background:var(--warn-soft);color:var(--warn)}
+.q .sl{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 footer a{color:var(--muted)}
 
@@ -154,6 +169,7 @@ footer a{color:var(--muted)}
   .srow{grid-template-columns:64px 1fr;gap:12px}
   .srow .sc{font-size:38px}
   .log li{grid-template-columns:1fr;gap:0}
+  .tl li{grid-template-columns:1fr;gap:2px}
 }
 @media (prefers-reduced-motion:no-preference){ .ev{transition:background .15s} }
 </style>
@@ -203,13 +219,28 @@ footer a{color:var(--muted)}
     <div class="qgrid" id="ccList"></div>
   </section>
 
+  <section aria-labelledby="h-ewc" id="ewcSec" hidden>
+    <div class="sechead">
+      <h2 id="h-ewc"><span class="en" id="ewcEd">EWC</span>日程与名额</h2>
+      <span class="updated" id="ewcCount"></span>
+    </div>
+    <div class="facts" id="ewcFacts"></div>
+    <ol class="tl" id="ewcTl" aria-label="EWC 日程"></ol>
+    <div class="subhead">已确认名额</div>
+    <div class="meter" id="ewcMeter" aria-hidden="true" hidden><i id="ewcBar" style="width:0%"></i></div>
+    <div class="qgrid" id="ewcList"></div>
+    <div class="subhead" id="ewcRefHead" hidden></div>
+    <div class="qgrid" id="ewcRef"></div>
+    <div class="q-note" id="ewcNote"></div>
+  </section>
+
   <section aria-labelledby="h-log">
     <div class="sechead"><h2 id="h-log"><span class="en">LOG</span>更新日志</h2></div>
     <ul class="log" id="log"></ul>
     <details class="more" id="logMore" hidden><summary id="logMoreN"></summary><ul class="log" id="logOld"></ul></details>
   </section>
 
-  <footer id="foot">数据来自 Capcom Pro Tour 官网、Liquipedia、start.gg 与各赛事报道，每周一、周四早上由 Claude 检索后自动更新。时间均按日本时间 (JST) 计算。</footer>
+  <footer id="foot">数据来自 Capcom Pro Tour 官网、Esports World Cup 官网、Liquipedia、start.gg 与各赛事报道，每周一、周四早上由 Claude 检索后自动更新。时间均按日本时间 (JST) 计算。</footer>
 </div>
 
 <script>
@@ -418,6 +449,51 @@ footer a{color:var(--muted)}
     box.hidden = cards.length === 0;
   }
 
+  function renderEwc(E){
+    const sec = $("#ewcSec");
+    if (!E || typeof E !== "object"){ sec.hidden = true; return; }
+    sec.hidden = false;
+    $("#ewcEd").textContent = E.edition || "EWC";
+    const facts = Array.isArray(E.facts) ? E.facts : [];
+    $("#ewcFacts").replaceChildren(...facts.map(f=>{
+      const c = el("div","fact");
+      c.append(el("div","k", f.k||""), el("div","v", f.v||"待公布"));
+      if (f.s) c.append(el("div","s", f.s));
+      return c;
+    }));
+    const ST = {set:["st-set","已公布"], tbd:["st-pending","待公布"], est:["st-est","参照往年"], done:["st-pending","已结束"]};
+    const sch = Array.isArray(E.schedule) ? E.schedule : [];
+    $("#ewcTl").replaceChildren(...sch.map(x=>{
+      const li = el("li");
+      li.append(el("div","w", x.when||"待公布"));
+      const t = el("div","t"), r1 = el("div","row1");
+      r1.append(el("span","wh", x.what||""));
+      const s = ST[x.state]; if (s) r1.append(el("span","st "+s[0], s[1]));
+      t.append(r1);
+      if (x.note) t.append(el("div","nt", x.note));
+      li.append(t);
+      return li;
+    }));
+    const q = Array.isArray(E.qualified) ? E.qualified : [];
+    const n = q.filter(x=>!x.tbd).length, total = +E.slotsTotal || 0;
+    $("#ewcCount").textContent = total ? n + " / " + total : "已确认 " + n + " 席 · 总名额待公布";
+    $("#ewcMeter").hidden = !total;
+    $("#ewcBar").style.width = total ? Math.min(100, n/total*100) + "%" : "0%";
+    const g = $("#ewcList");
+    if (!q.length) g.replaceChildren(el("div","empty", E.emptyNote || "还没有选手获得名额。"));
+    else g.replaceChildren(...q.map(x=>{ const c=el("div","q"+(x.tbd?" tbd":"")); c.append(el("div","p",x.player), el("div","via",x.via||"")); return c; }));
+    const ref = E.ref && Array.isArray(E.ref.items) ? E.ref : null;
+    $("#ewcRefHead").hidden = !ref;
+    $("#ewcRefHead").textContent = ref ? (ref.title || "名额构成") : "";
+    $("#ewcRef").replaceChildren(...(ref ? ref.items : []).map(x=>{
+      const c = el("div","q");
+      c.append(el("div","sl", x.slots||""), el("div","p", x.via||""));
+      if (x.note) c.append(el("div","via", x.note));
+      return c;
+    }));
+    $("#ewcNote").textContent = [E.note, E.checked ? "最后核对：" + E.checked : ""].filter(Boolean).join(" ");
+  }
+
   function renderStatus(){
     if (!status) return;
     renderRoad();
@@ -433,6 +509,8 @@ footer a{color:var(--muted)}
     $("#ccNote").textContent = status.ccNote || "";
     const g = $("#ccList"); g.replaceChildren();
     q.forEach(x=>{ const c=el("div","q"+(x.tbd?" tbd":"")); c.append(el("div","p",x.player), el("div","via",x.via||"")); g.append(c); });
+
+    renderEwc(status.ewc);
 
     const lg = $("#log"); lg.replaceChildren();
     const L = Array.isArray(status.log) ? status.log.slice(0,30) : [];

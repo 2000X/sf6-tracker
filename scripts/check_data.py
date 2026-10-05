@@ -52,6 +52,33 @@ def check(data):
         if isinstance(roadmap.get("character"), dict) and not roadmap["character"].get("name"):
             errors.append("roadmap.character 缺少 name")
 
+    ewc = status.get("ewc")
+    if ewc is not None:
+        if not isinstance(ewc, dict):
+            errors.append("status.ewc 应为对象")
+            ewc = {}
+        if not ewc.get("edition"):
+            errors.append("status.ewc 缺少 edition（如 \"EWC 2027\"）")
+        for f in ewc.get("facts", []):
+            if not isinstance(f, dict) or not f.get("k"):
+                errors.append(f"ewc.facts 每项都要有 k：{f}")
+        for x in ewc.get("schedule", []):
+            if not isinstance(x, dict) or not x.get("what"):
+                errors.append(f"ewc.schedule 每项都要有 what：{x}")
+            elif x.get("state") not in (None, "set", "tbd", "est", "done"):
+                errors.append(f"ewc.schedule 的 state 应为 set / tbd / est / done：{x}")
+        total = ewc.get("slotsTotal")
+        if total is not None and not isinstance(total, int):
+            errors.append("ewc.slotsTotal 应为整数或 null")
+        for q in ewc.get("qualified", []):
+            if not isinstance(q, dict) or not q.get("player"):
+                errors.append(f"ewc.qualified 有一项缺少 player：{q}")
+        ref = ewc.get("ref")
+        if ref is not None and not (isinstance(ref, dict) and isinstance(ref.get("items"), list)):
+            errors.append("ewc.ref 应为 {title, items: [...]}")
+        if ewc.get("checked") and not DATE.match(str(ewc["checked"])):
+            errors.append("ewc.checked 应为 YYYY-MM-DD")
+
     for doc_id, ev in events.items():
         where = f"events/{doc_id}"
         if not DOC_ID.match(doc_id):

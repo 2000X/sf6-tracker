@@ -2,8 +2,99 @@
  "status": {
   "brief": "下一站 EVO France 2026（法国尼斯，10/9–11，本季最后一场 CPT Premier），决赛预估日本时间 10/12（一）凌晨 1 点左右；SFL JAPAN 2026 明天 10/6（二）18:40 起 Division F 第 3 节恢复比赛。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-10-05 16:15",
+  "ewc": {
+   "checked": "2026-10-05",
+   "edition": "EWC 2027",
+   "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
+   "facts": [
+    {
+     "k": "地点",
+     "s": "2026 年移师巴黎后，2027 年回到利雅得",
+     "v": "沙特 利雅得"
+    },
+    {
+     "k": "整体日程",
+     "s": "目前只公布了 CS2 项目：7/20–8/1",
+     "v": "2027 年 7 月下旬起"
+    },
+    {
+     "k": "SF6 项目",
+     "s": "Capcom 与 EWC 的合作覆盖到 2027 年；利雅得比日本慢 6 小时",
+     "v": "日期待公布"
+    }
+   ],
+   "note": "EWC 冠军同时获得下一届 Capcom Cup 名额（2026 年冠军 Craime → Capcom Cup 13）。2027 年的名额数与分配以官方公布为准，公布前上面的 2026 构成仅供参考。",
+   "qualified": [],
+   "ref": {
+    "items": [
+     {
+      "note": "EVO Japan、Combo Breaker、EVO 2026 各 2 人，已有名额者往下顺延",
+      "slots": "6 席",
+      "via": "CPT Premier 冠亚军"
+     },
+     {
+      "note": "3/27–29，英国",
+      "slots": "2 席",
+      "via": "DreamHack Birmingham"
+     },
+     {
+      "note": "DreamHack Atlanta 等",
+      "slots": "18 席",
+      "via": "其他 Road to EWC 渠道"
+     },
+     {
+      "note": "7/24–26，正赛前一周在巴黎举行",
+      "slots": "6 席",
+      "via": "现场 LCQ"
+     }
+    ],
+    "title": "名额构成 · 参照 EWC 2026（共 32 人）"
+   },
+   "schedule": [
+    {
+     "state": "set",
+     "what": "Capcom 宣布 CPT、SFL 与 EWC 的三年合作（2025–2027）",
+     "when": "2025 年 3 月"
+    },
+    {
+     "note": "SF6 等其他项目的日期还没公布",
+     "state": "set",
+     "what": "EWC 公布 2027 年回到利雅得，CS2 项目 7/20–8/1 举行",
+     "when": "2026 年 9 月"
+    },
+    {
+     "note": "2026 年是 EVO Japan（5 月）、Combo Breaker（5 月）、EVO（6 月）各取冠亚军",
+     "state": "tbd",
+     "what": "CPT 2027 规则：哪些 Premier 发放 EWC 名额",
+     "when": "待公布"
+    },
+    {
+     "note": "2026 年从 3 月的 DreamHack Birmingham 开始陆续进行",
+     "state": "tbd",
+     "what": "Road to EWC 2027 预选赛（DreamHack 等）",
+     "when": "待公布"
+    },
+    {
+     "note": "2026 年在正赛前一周（7/24–26）于巴黎举行，取前 6 名",
+     "state": "est",
+     "what": "现场 Last Chance Qualifier",
+     "when": "参照 2026"
+    },
+    {
+     "note": "2026 年为 32 人、奖金 $1,000,000，7/29–8/1 共 4 天",
+     "state": "tbd",
+     "what": "SF6 正赛",
+     "when": "待公布"
+    }
+   ],
+   "slotsTotal": null
+  },
+  "lastUpdated": "2026-10-05 21:20",
   "log": [
+   {
+    "date": "2026-10-05",
+    "text": "新增「EWC 2027 · 日程与名额」板块：EWC 2027 回到利雅得（7 月下旬起，SF6 日期待公布），目前还没有选手获得名额；附 EWC 2026 的 32 人名额构成作参照。"
+   },
    {
     "date": "2026-10-05",
     "text": "页面调整：「下一站」分成「大型赛事 / 系列赛·联赛」两个选项卡，World Warrior 这类多赛段赛事不再顶掉下一场大型赛事；赛程表里系列赛单独成组，按下一赛段排序；更新日志只显示最近 3 条，其余折叠。新增 SFL JAPAN 2026（Division F 第 3 节 10/6 恢复，总决赛 2/23 东京 Big Sight）。"

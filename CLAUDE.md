@@ -15,6 +15,16 @@
 - 季后赛日期（目前按赛事站整理的 2027-01-10/11，标为预估）和总决赛（2027-02-23 东京 Big Sight）有官方消息时更新。
 - 来源优先 sf.esports.capcom.com/sfl/、esports-world.jp、sf6freak.com。
 
+## EWC 2027（`meta/status.ewc`）
+
+2026-10-05 新增。字段说明见 `docs/data-schema.md` 的 `meta/status.ewc` 一节。每次定时更新都要核对：
+
+- **日程**：EWC 2027 整体日程和 SF6 项目日期（目前只公布了利雅得、CS2 7/20–8/1）。SF6 日期公布后：更新 `facts` 里「SF6 项目」卡片和 `schedule` 里「SF6 正赛」一项（`state` 改 `set`）；同时在 `events` 新建 `ewc-2027`（kind `major`，city `沙特 利雅得`，写 `watch`；利雅得 UTC+3，比日本慢 6 小时）。
+- **名额规则**：CPT 2027 赛季规则、Road to EWC 2027 预选赛、LCQ 公布后，把 `ref` 换成 2027 的实际分配（`title` 改成「名额构成 · EWC 2027（共 N 人）」），填 `slotsTotal`，相应 `schedule` 项改 `set` 并写日期。
+- **已获名额**：有选手拿到 EWC 2027 名额（Premier 冠亚军、预选赛、顺延、LCQ）就加进 `ewc.qualified`，`via` 写清途径，并在 `log` 记一条。
+- 每次更新 `ewc.checked`。`ewc` 是 `meta/status` 的子字段，用 update 写整个 `ewc` 对象。
+- 来源优先 esportsworldcup.com、sf.esports.capcom.com/cpt/rules/、liquipedia.net/fighters、eventhubs。
+
 ## 更新日志
 
 `meta/status.log` 仍然最多 30 条，页面只显示最近 3 条，其余折叠。

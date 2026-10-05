@@ -58,6 +58,7 @@
    - SFL JAPAN（日本联赛，Division S / F）：最近几节的结果和两组积分排名，写进 sfl-japan-2026 的 note（各组领先队伍）；季后赛、总决赛的日期/会场公布或变动时更新 stages（官方确认后去掉 tentative）。来源优先 sf.esports.capcom.com/sfl/、esports-world.jp、sf6freak.com。
    - 未来 3 个月内赛事的官方赛程/直播时间表（SF6 预选、Top 8 的开始时间和时区），换算成日本时间写入 watch；日期/地点变动；新公布的大型赛事（新加入的赛事同样要写 watch）。
    - Capcom Cup 13 新确认的名额（Premier 冠军、名额顺延、Premier 积分榜名额、World Warrior 区域决赛冠军、SFL 世界赛相关）。
+   - EWC 2027（Esports World Cup）SF6 项目的日程、名额规则和新获得名额的选手，更新 meta/status.ewc（字段与维护规则见仓库的 CLAUDE.md 和 docs/data-schema.md）。
    - 街霸6 官方公布的下一位追加角色和下次版本/平衡调整日期（来源优先 streetfighter.com、Capcom 官方 Steam/X 公告、Buckler's Boot Camp、eventhubs、gematsu），更新 roadmap；传闻和泄露不写。
    来源优先：sf.esports.capcom.com、liquipedia.net/fighters、start.gg、evo.gg、eventhubs、shacknews、esports.gg。只写有来源支持的事实，不确定的内容标成待确认/预估或不写。
 3. 用一次 ArtifactData batch 写入所有改动：新赛事用 set；已有赛事用 update 并带上 if_version；更新 meta/status（lastUpdated 必更新；brief 写今天最值得看的一两件事，未来 7 天内有比赛时写上日本观赛时间；有新结果、新名额或观赛时间变化时在 log 最前面加一条当天记录，没有变化时 log 加一条"无重大变化，已核对 X、Y 赛程"之类的简短记录）。qualified 数组整体替换为最新完整列表。roadmap 每次都更新 checked；角色或调整日期有变化时在 log 记一条。

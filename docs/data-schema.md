@@ -82,3 +82,19 @@
 | `checked` | 最后核对日期 `YYYY-MM-DD` |
 
 `date` 按日本时间写 `YYYY-MM-DD`；`link` 必须是 `https://` 链接。上线当天显示「今天上线」，过期后显示「已上线」，应在下次更新时换成下一位。
+
+### meta/status.ewc
+
+页面「EWC 2027 · 日程与名额」板块的数据，放在 Capcom Cup 名额板块之后。整个字段不存在时页面不显示这一块。
+
+| 字段 | 说明 |
+|---|---|
+| `edition` | 届次，如 `"EWC 2027"`，显示在板块标题 |
+| `facts` | 数组 `{k, v, s?}`：顶部三张小卡片（地点 / 整体日程 / SF6 项目），`k` 标签、`v` 主文字、`s` 一句补充 |
+| `schedule` | 数组 `{when, what, state, note?}`：日程时间线，按时间先后排列。`when` 是自由文字（如 `"2026 年 9 月"`、`"7/24–26"`、`"待公布"`）；`state` 为 `set`（已公布）/ `tbd`（待公布）/ `est`（参照往年）/ `done`（已结束） |
+| `slotsTotal` | 名额总数（整数），官方未公布时为 `null`，页面显示「总名额待公布」且不显示进度条 |
+| `qualified` | 数组 `{player, via, tbd?}`：已获 EWC 名额的选手，`via` 写获得途径（如 `"EVO Japan 2027 冠军"`） |
+| `emptyNote` | 还没有名额时显示的一句说明 |
+| `ref` | `{title, items: [{slots, via, note?}]}`：名额构成。2027 规则公布前放 2026 的构成作参照，公布后换成 2027 的实际分配并改 `title` |
+| `note` | 板块底部说明 |
+| `checked` | 最后核对日期 `YYYY-MM-DD` |

@@ -1,9 +1,13 @@
 {
  "status": {
-  "brief": "下一站 EVO France 2026（法国尼斯，10/9–11，本季最后一场 CPT Premier），决赛预估日本时间 10/12（一）凌晨 1 点左右；World Warrior 区域决赛已开打，Asia South 冠军 BD|Si Anik 锁定 Capcom Cup 13 名额。",
+  "brief": "下一站 EVO France 2026（法国尼斯，10/9–11，本季最后一场 CPT Premier），决赛预估日本时间 10/12（一）凌晨 1 点左右；SFL JAPAN 2026 明天 10/6（二）18:40 起 Division F 第 3 节恢复比赛。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
-  "lastUpdated": "2026-10-05 16:00",
+  "lastUpdated": "2026-10-05 16:15",
   "log": [
+   {
+    "date": "2026-10-05",
+    "text": "页面调整：「下一站」分成「大型赛事 / 系列赛·联赛」两个选项卡，World Warrior 这类多赛段赛事不再顶掉下一场大型赛事；赛程表里系列赛单独成组，按下一赛段排序；更新日志只显示最近 3 条，其余折叠。新增 SFL JAPAN 2026（Division F 第 3 节 10/6 恢复，总决赛 2/23 东京 Big Sight）。"
+   },
    {
     "date": "2026-10-05",
     "text": "无重大变化，下午复核 EVO France 赛程（SF6 时段官方仍未公布，保持预估）与 Arjun 10/13 上线日期。"
@@ -208,6 +212,22 @@
    "name": "CPT World Warrior 区域决赛",
    "note": "Asia South 赛区已决出冠军 BD|Si Anik（Mai/Ryu）；其余 24 个赛区决赛分批于 10/17–12/13 进行，日本赛区 12/13 收官。",
    "preview": "每个赛区冠军获得 Capcom Cup 13 名额",
+   "series": true,
+   "stages": [
+    {
+     "date": "2026-10-02",
+     "name": "Asia South 赛区决赛"
+    },
+    {
+     "date": "2026-10-17",
+     "name": "Brazil、Mexico 等赛区决赛陆续开打",
+     "tentative": true
+    },
+    {
+     "date": "2026-12-13",
+     "name": "日本赛区决赛"
+    }
+   ],
    "start": "2026-10-02",
    "stream": "Capcom Fighters / Capcom Fighters JP",
    "watch": [
@@ -297,6 +317,151 @@
    "start": "2026-07-29",
    "venue": "Paris Expo Porte de Versailles"
   },
+  "sfl-japan-2026": {
+   "city": "日本",
+   "end": "2027-02-23",
+   "kind": "team",
+   "link": "https://sf.esports.capcom.com/sfl/",
+   "name": "Street Fighter League JAPAN 2026",
+   "note": "12 队分 Division S / F 两组各 6 队，每组 10 节常规赛；9 月中旬起停赛约一个月，10/6 Division F 第 3 节恢复。目前 S 组 Saishunkan Sol 熊本 90 分领跑，F 组 Good 8 Squad 与 RIDDLE ORDER 各 60 分并列第一。",
+   "preview": "各组前三进季后赛，两组第一在总决赛对决；日本冠军队晋级 2027 年 3 月 SFL 世界锦标赛",
+   "series": true,
+   "stages": [
+    {
+     "date": "2026-08-25",
+     "name": "Division S 第 1 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "Division F 第 1 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-09-01",
+     "name": "Division S 第 2 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Division F 第 2 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Division S 第 3 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-06",
+     "name": "Division F 第 3 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-16",
+     "name": "Division S 第 4 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-20",
+     "name": "Division F 第 4 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-23",
+     "name": "Division S 第 5 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-27",
+     "name": "Division F 第 5 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-10-30",
+     "name": "Division S 第 6 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-11-03",
+     "name": "Division F 第 6 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-11-06",
+     "name": "Division S 第 7 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-11-10",
+     "name": "Division F 第 7 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-11-13",
+     "name": "Division S 第 8 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-11-27",
+     "name": "Division F 第 8 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-12-01",
+     "name": "Division S 第 9 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Division F 第 9 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-12-08",
+     "name": "Division S 第 10 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2026-12-11",
+     "name": "Division F 第 10 节",
+     "time": "18:40"
+    },
+    {
+     "date": "2027-01-10",
+     "name": "季后赛 Day 1",
+     "tentative": true
+    },
+    {
+     "date": "2027-01-11",
+     "name": "季后赛 Day 2",
+     "tentative": true
+    },
+    {
+     "date": "2027-02-23",
+     "name": "总决赛（东京 Big Sight）"
+    }
+   ],
+   "start": "2026-08-25",
+   "stream": "CAPCOM Fighters JP YouTube / Twitch（免费）",
+   "venue": "总决赛：东京 Big Sight",
+   "watch": [
+    {
+     "key": true,
+     "what": "Division F 第 3 节（停赛后恢复）",
+     "when": "10/6（二）18:40 起"
+    },
+    {
+     "what": "Division S 第 4 节",
+     "when": "10/16（五）18:40 起"
+    },
+    {
+     "what": "总决赛 · 东京 Big Sight",
+     "when": "2/23（二·祝）"
+    }
+   ],
+   "watchNote": "比赛在日本，时间即日本时间；常规赛直播 18:40 开始（先有赛前节目）。季后赛 1/10–11 为赛事站整理的日期，官方确认前按预估显示。"
+  },
   "sfl-playoffs-2026": {
    "city": "英国伦敦 / 美国帕萨迪纳",
    "end": "2026-11-09",
@@ -305,6 +470,20 @@
    "name": "Street Fighter League 2026 赛区季后赛（EMEAA / Americas）",
    "note": "EMEAA 四强队伍：GTW、Red Dunes、MVS、YESPORTS；Americas 赛区晋级队伍待定。",
    "preview": "各赛区季后赛冠军队伍晋级 2027年3月的 SFL 世界锦标赛（与 Capcom Cup 13 同期在两国国技馆举行）",
+   "series": true,
+   "stages": [
+    {
+     "date": "2026-10-24",
+     "name": "EMEAA 季后赛 · 伦敦",
+     "time": "20:00"
+    },
+    {
+     "date": "2026-11-09",
+     "name": "Americas 决赛 · 帕萨迪纳",
+     "tentative": true,
+     "time": "11:30 左右"
+    }
+   ],
    "start": "2026-10-24",
    "stream": "Capcom Fighters 官方 Twitch / YouTube",
    "venue": "MCM Comic Con London（ExCeL London） / Anime Pasadena（Civic Auditorium）",

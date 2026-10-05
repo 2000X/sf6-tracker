@@ -75,6 +75,14 @@ def check(data):
         if watch is not None:
             if not isinstance(watch, list) or not all(isinstance(w, dict) and w.get("when") for w in watch):
                 errors.append(f"{where}：watch 每项都要有 when")
+        stages = ev.get("stages")
+        if stages is not None:
+            if not isinstance(stages, list) or not all(isinstance(s, dict) and s.get("name") and DATE.match(str(s.get("date", ""))) for s in stages):
+                errors.append(f"{where}：stages 每项都要有 name 和 YYYY-MM-DD 的 date")
+            if not ev.get("series"):
+                warnings.append(f"{where}：有 stages 但没有 series: true，页面不会显示赛段")
+        if ev.get("series") and not stages:
+            warnings.append(f"{where}：系列赛没有 stages，「系列赛」选项卡里会显示「下一赛段日期待公布」")
         if ev.get("runnerUp") and not ev.get("champion"):
             warnings.append(f"{where}：有亚军但没有冠军")
     return errors, warnings

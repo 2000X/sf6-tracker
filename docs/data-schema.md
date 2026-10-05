@@ -46,6 +46,17 @@
 | `tentative` | `true` 表示按往年推算、官方未公布（页面显示「预估」） |
 | `key` | `true` 表示最值得看的一项，显示在「下一站」卡片 |
 
+### 系列赛 / 联赛：`series` 与 `stages`
+
+跨数周、分多个赛段的赛事（World Warrior 区域决赛、SFL JAPAN、SFL 各赛区季后赛）加 `series: true` 和 `stages`：
+
+| 字段 | 说明 |
+|---|---|
+| `series` | `true`：放进顶部「系列赛 · 联赛」选项卡和赛程表的系列赛分组，按下一赛段排序，不占「大型赛事」选项卡 |
+| `stages` | 数组 `{date, name, time?, tentative?}`；`date` 为日本时间 `YYYY-MM-DD`，`time` 如 `"18:40"`，`tentative: true` 显示「预估」 |
+
+页面取第一个日期不早于今天的赛段作为「下一赛段」显示倒计时；赛程表里列出接下来 4 个赛段。单场或单个周末的大型赛事不要标 `series`。
+
 页面按日期自动判断状态：今天早于 `start` 为「即将开始」，在 `start`–`end` 之间为「进行中」，结束后有 `champion` 为已结束，没有则显示「结果待更新」。已结束的赛事不显示 `watch`。
 
 ## meta/status
@@ -57,7 +68,7 @@
 | `ccNote` | Capcom Cup 13 名额构成说明 |
 | `totalSlots` | 名额总数，48 |
 | `qualified` | 数组 `{player, via, tbd?}`，`tbd: true` 为待确认名额 |
-| `log` | 数组 `{date, text}`，最新在最前，最多 30 条 |
+| `log` | 数组 `{date, text}`，最新在最前，最多 30 条；页面只显示最近 3 条，其余折叠 |
 | `roadmap` | 下一次角色追加与版本调整，见下 |
 
 ### meta/status.roadmap

@@ -47,7 +47,25 @@ h1 .slash{color:var(--accent)}
 .next > *{position:relative;z-index:1}
 
 .road{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
-.next:not([hidden]) + .road{margin-top:-18px}
+.hero{display:flex;flex-direction:column}
+.hero:not([hidden]) + .road{margin-top:-18px}
+.tabs{display:flex;gap:4px;padding-left:14px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:13px;font-weight:700;border:1px solid var(--line);border-bottom:none;background:var(--surface);color:var(--muted);border-radius:10px 10px 0 0;padding:6px 14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tabs .badge{font-family:var(--mono);font-size:11px;font-weight:600;padding:0 6px;border-radius:999px;background:var(--line);color:var(--muted)}
+.tabs .badge:empty{display:none}
+.tabs .badge.today{background:var(--live-soft);color:var(--live)}
+.next.series{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.srow{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center}
+.srow + .srow{border-top:1px solid color-mix(in srgb,var(--bg) 20%,transparent);padding-top:12px}
+.srow .sc{font-family:var(--display);font-size:44px;line-height:.9;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+.srow .sc small{font-family:var(--body);font-size:13px;font-weight:700;color:var(--bg);margin-left:3px}
+.srow .sc.word{font-family:var(--body);font-weight:800;font-size:24px}
+.srow .sn{font-size:16px;font-weight:800;line-height:1.3}
+.srow .ss{font-size:13px;opacity:.85}
+.srow .ss b{font-family:var(--mono);font-weight:600;color:var(--accent)}
+.srow .sa{font-size:12px;opacity:.65}
 .rd{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
 .rd.nodate{grid-template-columns:1fr}
 .rd .rc{font-family:var(--display);font-size:40px;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -114,6 +132,17 @@ h2 .en{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:
 .log li{display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:14px}
 .log time{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
 .empty,.notice{color:var(--muted);font-size:14px;padding:12px 0}
+.subhead{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);padding-top:16px;margin-bottom:-4px}
+.stages{display:flex;flex-wrap:wrap;gap:4px 6px;margin-top:2px}
+.stg{font-size:12px;padding:1px 8px;border-radius:4px;background:var(--line);color:var(--muted);white-space:nowrap}
+.stg.nx{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.more{margin-top:-2px}
+.more summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none;display:inline-flex;gap:6px;align-items:center;padding:4px 0}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"▸";font-size:11px}
+.more[open] summary::before{content:"▾"}
+.more summary:hover{color:var(--ink)}
+.more .log{margin-top:10px}
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
 footer a{color:var(--muted)}
 
@@ -122,6 +151,8 @@ footer a{color:var(--muted)}
   .date{display:flex;gap:8px;align-items:baseline}
   .next{grid-template-columns:1fr;gap:8px}
   .next .count{font-size:60px}
+  .srow{grid-template-columns:64px 1fr;gap:12px}
+  .srow .sc{font-size:38px}
   .log li{grid-template-columns:1fr;gap:0}
 }
 @media (prefers-reduced-motion:no-preference){ .ev{transition:background .15s} }
@@ -135,7 +166,14 @@ footer a{color:var(--muted)}
     <div class="brief" id="brief" hidden></div>
   </header>
 
-  <div class="next" id="next" hidden></div>
+  <div class="hero" id="hero" hidden>
+    <div class="tabs" role="tablist" aria-label="下一站">
+      <button type="button" role="tab" id="t-big" data-tab="big" aria-controls="next" aria-selected="true">大型赛事</button>
+      <button type="button" role="tab" id="t-ser" data-tab="ser" aria-controls="nextSeries" aria-selected="false">系列赛 · 联赛<span class="badge" id="serBadge"></span></button>
+    </div>
+    <div class="next" id="next" role="tabpanel" aria-labelledby="t-big"></div>
+    <div class="next series" id="nextSeries" role="tabpanel" aria-labelledby="t-ser" hidden></div>
+  </div>
 
   <div class="road" id="road" role="group" aria-label="角色追加与版本调整" hidden></div>
 
@@ -149,6 +187,9 @@ footer a{color:var(--muted)}
       </div>
     </div>
     <div class="list" id="upcoming"></div>
+    <div class="subhead" id="seriesHead" hidden>系列赛 · 联赛（按下一赛段排序）</div>
+    <div class="list" id="seriesList"></div>
+    <div class="subhead" id="pastHead" hidden>已结束</div>
     <div class="list" id="past"></div>
   </section>
 
@@ -165,6 +206,7 @@ footer a{color:var(--muted)}
   <section aria-labelledby="h-log">
     <div class="sechead"><h2 id="h-log"><span class="en">LOG</span>更新日志</h2></div>
     <ul class="log" id="log"></ul>
+    <details class="more" id="logMore" hidden><summary id="logMoreN"></summary><ul class="log" id="logOld"></ul></details>
   </section>
 
   <footer id="foot">数据来自 Capcom Pro Tour 官网、Liquipedia、start.gg 与各赛事报道，每周一、周四早上由 Claude 检索后自动更新。时间均按日本时间 (JST) 计算。</footer>
@@ -174,12 +216,21 @@ footer a{color:var(--muted)}
 (function(){
   const $ = (s) => document.querySelector(s);
   const KIND = {premier:"CPT Premier", major:"Major", invitational:"邀请赛", team:"团体赛", final:"总决赛", online:"线上"};
-  let events = [], status = null, filter = "all";
+  let events = [], status = null, filter = "all", heroTab = null;
+  const WD = "日一二三四五六";
+  const isDay = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d || "");
 
   function el(tag, cls, text){ const e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=String(text); return e; }
   function todayJST(){ return new Date(Date.now()+9*3600e3).toISOString().slice(0,10); }
   function days(a,b){ return Math.round((Date.parse(b+"T00:00:00Z")-Date.parse(a+"T00:00:00Z"))/864e5); }
   function md(d){ return d ? d.slice(5).replace("-", ".") : ""; }
+  function mdw(d){ const p = d.split("-"); return (+p[1]) + "/" + (+p[2]) + "（" + WD[new Date(d + "T00:00:00Z").getUTCDay()] + "）"; }
+  const isSeries = (ev) => !!ev.series;
+  function stagesOf(ev){ return Array.isArray(ev.stages) ? ev.stages.filter(s => s && isDay(s.date)).sort((a,b)=>a.date.localeCompare(b.date)) : []; }
+  function nextStages(ev){ const t = todayJST(); return stagesOf(ev).filter(s => s.date >= t); }
+  function sortKey(ev){ if (isSeries(ev)){ const n = nextStages(ev)[0]; if (n) return n.date; } return ev.start || ""; }
+  const isOpen = (ev) => ["up","live"].includes(stateOf(ev));
+  function stageText(s, withTime){ return s.name + (withTime && s.time ? " " + s.time : "") + (s.tentative ? "（预估）" : ""); }
   function stateOf(ev){
     if (ev.status === "cancelled") return "cancelled";
     const t = todayJST(), s = ev.start, e = ev.end || ev.start;
@@ -219,10 +270,23 @@ footer a{color:var(--muted)}
     if (st==="live") r1.append(el("span","st st-live","进行中"));
     if (st==="up") { const n=days(todayJST(), ev.start); r1.append(el("span","st st-up", n<=0?"即将开始":"还有 "+n+" 天")); }
     if (st==="pending") r1.append(el("span","st st-pending","结果待更新"));
+    if (isSeries(ev) && st==="live"){
+      const n = nextStages(ev)[0];
+      if (n){ const k = days(todayJST(), n.date); r1.append(el("span","st "+(k===0?"st-live":"st-up"), k===0 ? "今天有比赛" : "下一赛段 " + k + " 天后")); }
+    }
     t.append(r1);
     const bits = [ev.city, ev.venue, ev.entrants ? ev.entrants.toLocaleString("en-US")+" 人参赛" : null, ev.prize].filter(Boolean);
     if (bits.length) t.append(el("div","meta", bits.join(" · ")));
     if (ev.note) t.append(el("div","note", ev.note));
+    if (isSeries(ev) && (st==="up" || st==="live")){
+      const all = stagesOf(ev), fut = nextStages(ev), shown = fut.slice(0,4);
+      if (shown.length){
+        const box = el("div","stages");
+        shown.forEach((s,i)=> box.append(el("span","stg"+(i===0?" nx":""), mdw(s.date) + " " + stageText(s, false))));
+        if (fut.length > shown.length) box.append(el("span","stg","之后还有 " + (fut.length - shown.length) + " 个赛段"));
+        t.append(box);
+      }
+    }
     if (st!=="done" && st!=="pending" && Array.isArray(ev.watch) && ev.watch.length) t.append(watchBox(ev));
     r.append(t);
 
@@ -243,13 +307,61 @@ footer a{color:var(--muted)}
     up.replaceChildren(); past.replaceChildren();
     let list = events.slice();
     if (filter==="premier") list = list.filter(e=>e.kind==="premier");
-    const open = list.filter(e=>["up","live"].includes(stateOf(e))).sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+    const open = list.filter(isOpen);
+    const single = open.filter(e=>!isSeries(e)).sort((a,b)=>(a.start||"").localeCompare(b.start||""));
+    const ser = open.filter(isSeries).sort((a,b)=>sortKey(a).localeCompare(sortKey(b)));
     const closed = filter==="up" ? [] : list.filter(e=>["done","pending"].includes(stateOf(e))).sort((a,b)=>(b.end||b.start||"").localeCompare(a.end||a.start||""));
-    open.forEach(e=>up.append(row(e)));
+    const sl = $("#seriesList"); sl.replaceChildren();
+    single.forEach(e=>up.append(row(e)));
+    ser.forEach(e=>sl.append(row(e)));
     closed.forEach(e=>past.append(row(e)));
+    $("#seriesHead").hidden = !ser.length;
+    $("#pastHead").hidden = !closed.length || !open.length;
     if (!open.length && !closed.length) past.append(el("div","empty","暂无符合条件的赛事。"));
+    renderHero();
+  }
 
-    const nx = events.filter(e=>["up","live"].includes(stateOf(e))).sort((a,b)=>(a.start||"").localeCompare(b.start||""))[0];
+  function renderSeriesPanel(list){
+    const box = $("#nextSeries"); box.replaceChildren();
+    box.append(el("div","lbl","进行中的系列赛 · 按下一赛段排序"));
+    list.slice(0,4).forEach(ev=>{
+      const fut = nextStages(ev), n = fut[0], r = el("div","srow");
+      const c = el("div","sc");
+      if (!n){ c.textContent = "—"; c.classList.add("word"); }
+      else { const k = days(todayJST(), n.date); if (k===0){ c.textContent = "今天"; c.classList.add("word"); } else { c.textContent = String(k); c.append(el("small",null,"天")); } }
+      const info = el("div");
+      info.append(el("div","sn", ev.name));
+      const s = el("div","ss");
+      if (n){ s.append(el("b",null, mdw(n.date) + (n.time ? " " + n.time : "")), document.createTextNode(" · " + stageText(n, false))); }
+      else s.textContent = "下一赛段日期待公布";
+      info.append(s);
+      if (fut[1]) info.append(el("div","sa","之后：" + mdw(fut[1].date) + " " + stageText(fut[1], false)));
+      r.append(c, info); box.append(r);
+    });
+  }
+
+  function setTab(t){
+    heroTab = t;
+    const big = t === "big";
+    $("#t-big").setAttribute("aria-selected", String(big));
+    $("#t-ser").setAttribute("aria-selected", String(!big));
+    $("#next").hidden = !big; $("#nextSeries").hidden = big;
+  }
+
+  function renderHero(){
+    const openAll = events.filter(isOpen);
+    const nx = openAll.filter(e=>!isSeries(e)).sort((a,b)=>(a.start||"").localeCompare(b.start||""))[0];
+    const sers = openAll.filter(isSeries).sort((a,b)=>sortKey(a).localeCompare(sortKey(b)));
+    const hero = $("#hero");
+    if (!nx && !sers.length){ hero.hidden = true; return; }
+    hero.hidden = false;
+    const badge = $("#serBadge"), today = todayJST();
+    const playingToday = sers.some(e=>nextStages(e).some(s=>s.date===today));
+    badge.textContent = sers.length ? (playingToday ? "今天" : String(sers.length)) : "";
+    badge.classList.toggle("today", playingToday);
+    $("#t-ser").hidden = !sers.length;
+    $("#t-big").hidden = !nx;
+    renderSeriesPanel(sers);
     const box = $("#next");
     if (nx){
       box.replaceChildren();
@@ -264,8 +376,13 @@ footer a{color:var(--muted)}
       if (nx.preview) info.append(el("div","sub", nx.preview));
       const key = Array.isArray(nx.watch) ? (nx.watch.find(x=>x.key) || nx.watch[nx.watch.length-1]) : null;
       if (key){ const j = el("div","jst"); j.append(el("b",null,"JST "+(key.when||"待公布")), document.createTextNode(" · "+(key.what||"")+(key.tentative?"（预估）":""))); info.append(j); }
-      box.append(c, info); box.hidden = false;
-    } else box.hidden = true;
+      box.append(c, info);
+    }
+    let t = heroTab || "big";
+    if (t === "big" && !nx) t = "ser";
+    if (t === "ser" && !sers.length) t = "big";
+    setTab(t);
+    heroTab = heroTab ? t : null;
   }
 
   function renderRoad(){
@@ -319,8 +436,13 @@ footer a{color:var(--muted)}
 
     const lg = $("#log"); lg.replaceChildren();
     const L = Array.isArray(status.log) ? status.log.slice(0,30) : [];
+    const SHOW = 3, old = $("#logOld"), more = $("#logMore");
+    const item = (x) => { const li=el("li"); li.append(el("time",null,x.date||""), el("div",null,x.text||"")); return li; };
     if (!L.length) lg.append(el("li","empty","暂无记录。"));
-    L.forEach(x=>{ const li=el("li"); li.append(el("time",null,x.date||""), el("div",null,x.text||"")); lg.append(li); });
+    L.slice(0,SHOW).forEach(x=>lg.append(item(x)));
+    old.replaceChildren(...L.slice(SHOW).map(item));
+    $("#logMoreN").textContent = "更早的 " + (L.length - SHOW) + " 条";
+    more.hidden = L.length <= SHOW;
   }
 
 
@@ -341,6 +463,15 @@ footer a{color:var(--muted)}
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
     let t; window.addEventListener("resize", ()=>{ clearTimeout(t); t = setTimeout(fit, 100); });
   })();
+
+  document.querySelectorAll(".tabs button").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ setTab(btn.dataset.tab); heroTab = btn.dataset.tab; });
+    btn.addEventListener("keydown", (e)=>{
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      const o = btn.dataset.tab === "big" ? $("#t-ser") : $("#t-big");
+      if (!o.hidden){ o.click(); o.focus(); }
+    });
+  });
 
   document.querySelectorAll(".filters button").forEach(btn=>{
     btn.addEventListener("click", ()=>{

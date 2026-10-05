@@ -32,6 +32,7 @@
 | `docs/daily-task.md` | 定时更新任务的设置与完整指令 |
 | `docs/project-log.md` | 项目由来、设计决策、已知待确认事项 |
 | `CHANGELOG.md` | 版本变更记录 |
+| `CLAUDE.md` | 给定时任务和 Claude 的维护规则补充（系列赛字段等） |
 
 ## 想修改时
 

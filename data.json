@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "下一站 EVO France 2026（法国尼斯，10/9–11，本季最后一场 CPT Premier），决赛预估日本时间 10/12（一）凌晨 1 点左右；SFL JAPAN 2026 明天 10/6（二）18:40 起 Division F 第 3 节恢复比赛。",
+  "brief": "EVO France 2026（尼斯，10/9–11，本季最后一场 CPT Premier）本周末开打，SF6 时段官方仍未公布，决赛预估日本时间 10/12（一）01:00 左右；SFL JAPAN Division S 第 4 节 10/16（五）18:40 起。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-10-05",
+   "checked": "2026-10-08",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -14,13 +14,13 @@
     },
     {
      "k": "整体日程",
-     "s": "目前只公布了 CS2 项目：7/20–8/1",
+     "s": "据报道 EWC 2027 为 7/16–8/1（利雅得），官方细则待确认；此前仅见 CS2 项目 7/20–8/1",
      "v": "2027 年 7 月下旬起"
     },
     {
      "k": "SF6 项目",
      "s": "Capcom 与 EWC 的合作覆盖到 2027 年；利雅得比日本慢 6 小时",
-     "v": "日期待公布"
+     "v": "已列入 2027 项目阵容，日期待公布"
     }
    ],
    "note": "EWC 冠军同时获得下一届 Capcom Cup 名额（2026 年冠军 Craime → Capcom Cup 13）。2027 年的名额数与分配以官方公布为准，公布前上面的 2026 构成仅供参考。",
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-10-05 21:20",
+  "lastUpdated": "2026-10-08 09:10",
   "log": [
+   {
+    "date": "2026-10-08",
+    "text": "SFL JAPAN Division F 第 3 节（10/6）：G8S 30-10 击败 REJECT，RIDDLE ORDER 完胜名古屋NTPOJA 升至单独第一；DFM 逆转 VARREL。EVO France SF6 时段仍未公布，保持预估；Arjun 仍为 10/13 上线，平衡调整无官方日期；EWC 2027 报道为 7/16–8/1，SF6 在项目阵容内。"
+   },
    {
     "date": "2026-10-05",
     "text": "新增「EWC 2027 · 日程与名额」板块：EWC 2027 回到利雅得（7 月下旬起，SF6 日期待公布），目前还没有选手获得名额；附 EWC 2026 的 32 人名额构成作参照。"
@@ -190,7 +194,7 @@
     "name": "Arjun",
     "note": "Year 4 第 2 位角色"
    },
-   "checked": "2026-10-05"
+   "checked": "2026-10-08"
   },
   "totalSlots": 48
  },
@@ -414,7 +418,7 @@
    "kind": "team",
    "link": "https://sf.esports.capcom.com/sfl/",
    "name": "Street Fighter League JAPAN 2026",
-   "note": "12 队分 Division S / F 两组各 6 队，每组 10 节常规赛；9 月中旬起停赛约一个月，10/6 Division F 第 3 节恢复。目前 S 组 Saishunkan Sol 熊本 90 分领跑，F 组 Good 8 Squad 与 RIDDLE ORDER 各 60 分并列第一。",
+   "note": "12 队分 Division S / F 两组各 6 队，每组 10 节常规赛。S 组 Saishunkan Sol 熊本领跑（第 3 节后 90 分）；F 组第 3 节（10/6）RIDDLE ORDER 独得 40 分升至单独第一，Good 8 Squad 紧随其后；下一节 Division S 第 4 节 10/16。",
    "preview": "各组前三进季后赛，两组第一在总决赛对决；日本冠军队晋级 2027 年 3 月 SFL 世界锦标赛",
    "series": true,
    "stages": [
@@ -539,12 +543,12 @@
    "watch": [
     {
      "key": true,
-     "what": "Division F 第 3 节（停赛后恢复）",
-     "when": "10/6（二）18:40 起"
-    },
-    {
      "what": "Division S 第 4 节",
      "when": "10/16（五）18:40 起"
+    },
+    {
+     "what": "Division F 第 4 节",
+     "when": "10/20（二）18:40 起"
     },
     {
      "what": "总决赛 · 东京 Big Sight",

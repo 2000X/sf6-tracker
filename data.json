@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "EVO France 2026（尼斯，10/9–11，本季最后一场 CPT Premier）本周末开打，SF6 时段官方仍未公布，决赛预估日本时间 10/12（一）01:00 左右；SFL JAPAN Division S 第 4 节 10/16（五）18:40 起。",
+  "brief": "EVO France 2026 的 SF6 Top 8 已在日本时间 10/12 凌晨打完，冠军（直通 Capcom Cup 13）等待多方来源确认；明天 10/13 Arjun 上线，SFL JAPAN Division S 第 4 节 10/16（五）18:40 起。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-10-08",
+   "checked": "2026-10-12",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-10-08 09:10",
+  "lastUpdated": "2026-10-12 09:20",
   "log": [
+   {
+    "date": "2026-10-12",
+    "text": "EVO France 2026 的 SF6 Top 8（日本时间 10/12 01:30–05:30）已结束，冠军名额待确认：有报道称 DualKevin 夺冠、Tachikawa 亚军，但来源细节不一致，暂不写入，周四复核。Arjun 仍为 10/13 上线，平衡调整无官方日期；EWC 2027 SF6 日期仍未公布（整体报道为 7/16–8/1）。"
+   },
    {
     "date": "2026-10-08",
     "text": "SFL JAPAN Division F 第 3 节（10/6）：G8S 30-10 击败 REJECT，RIDDLE ORDER 完胜名古屋NTPOJA 升至单独第一；DFM 逆转 VARREL。EVO France SF6 时段仍未公布，保持预估；Arjun 仍为 10/13 上线，平衡调整无官方日期；EWC 2027 报道为 7/16–8/1，SF6 在项目阵容内。"
@@ -180,7 +184,7 @@
    {
     "player": "EVO France 2026 冠军",
     "tbd": true,
-    "via": "10/11 决出"
+    "via": "10/11 决出（Top 8 已打完，冠军待确认）"
    }
   ],
   "roadmap": {
@@ -194,7 +198,7 @@
     "name": "Arjun",
     "note": "Year 4 第 2 位角色"
    },
-   "checked": "2026-10-08"
+   "checked": "2026-10-12"
   },
   "totalSlots": 48
  },
@@ -361,7 +365,7 @@
    "kind": "premier",
    "link": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/France",
    "name": "EVO France 2026",
-   "note": "2025 年 SF6 项目 1,669 人参赛；2026 年最终报名 1,071 人，仍为全项目人数最多的游戏。",
+   "note": "2025 年 SF6 项目 1,669 人参赛；2026 年最终报名 1,071 人，仍为全项目人数最多的游戏。Top 8 已于日本时间 10/12 凌晨打完，最终冠亚军尚待多方来源确认（有报道称 DualKevin（Rashid）夺冠、Tachikawa（C. Viper）亚军，但细节不一致，暂不写入）。",
    "preview": "本季最后一场 CPT Premier，冠军直通 Capcom Cup 13",
    "start": "2026-10-09",
    "stream": "EVO 官方 Twitch / YouTube",
@@ -374,12 +378,11 @@
     },
     {
      "key": true,
-     "tentative": true,
-     "what": "SF6 Top 8 决赛",
-     "when": "10/12（一）01:00 左右"
+     "what": "SF6 Top 8 决赛（已进行）",
+     "when": "10/12（一）01:30–05:30 左右"
     }
    ],
-   "watchNote": "官方还没公布 SF6 时段，按 2025 年同赛事时间推算（法国夏令时，比日本慢 7 小时）；决赛在周日晚，日本是周一凌晨。"
+   "watchNote": "官方主舞台日程：SF6 Top 8 为法国夏令时 10/11（日）18:30–22:30（比日本慢 7 小时），即日本时间 10/12 凌晨 01:30–05:30；赛事已结束，冠亚军待核实。"
   },
   "evo-japan-2026": {
    "champion": "Yamaguchi",

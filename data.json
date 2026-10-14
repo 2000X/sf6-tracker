@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "EVO France 2026 的 SF6 Top 8 已在日本时间 10/12 凌晨打完，冠军（直通 Capcom Cup 13）等待多方来源确认；明天 10/13 Arjun 上线，SFL JAPAN Division S 第 4 节 10/16（五）18:40 起。",
+  "brief": "EVO France 2026 已决出冠军：Dual Kevin（Rashid）击败 Tachikawa（C. Viper），直通 Capcom Cup 13。本周看点：SFL JAPAN Division S 第 4 节 10/16（五）18:40 起，Division F 第 4 节 10/20（二）18:40 起；World Warrior 其余赛区决赛 10/17 起开打。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-10-12",
+   "checked": "2026-10-15",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-10-12 09:20",
+  "lastUpdated": "2026-10-15 09:10",
   "log": [
+   {
+    "date": "2026-10-15",
+    "text": "EVO France 2026 结果确认：冠军 Dual Kevin（Rashid）、亚军 Tachikawa（C. Viper），Capcom Cup 13 名额新增 Dual Kevin（已确认 12 个）；Tachikawa 的名额来源说法不一，暂不写入。Arjun 已上线，roadmap 换为 Tifa（2027 年初）。SFL JAPAN 未检到新结果，EWC 2027 SF6 日期仍未公布。"
+   },
    {
     "date": "2026-10-12",
     "text": "EVO France 2026 的 SF6 Top 8（日本时间 10/12 01:30–05:30）已结束，冠军名额待确认：有报道称 DualKevin 夺冠、Tachikawa 亚军，但来源细节不一致，暂不写入，周四复核。Arjun 仍为 10/13 上线，平衡调整无官方日期；EWC 2027 SF6 日期仍未公布（整体报道为 7/16–8/1）。"
@@ -182,9 +186,8 @@
     "via": "World Warrior Asia South 赛区冠军"
    },
    {
-    "player": "EVO France 2026 冠军",
-    "tbd": true,
-    "via": "10/11 决出（Top 8 已打完，冠军待确认）"
+    "player": "Dual Kevin",
+    "via": "EVO France 2026 冠军"
    }
   ],
   "roadmap": {
@@ -193,12 +196,12 @@
     "note": "官方尚未公布下次平衡调整日期（上次为 8/3 随 Yasmine 上线的全角色调整）"
    },
    "character": {
-    "date": "2026-10-13",
+    "date": null,
     "link": "https://store.steampowered.com/news/app/1364780/view/676256891013169832",
-    "name": "Arjun",
-    "note": "Year 4 第 2 位角色"
+    "name": "Tifa",
+    "note": "Year 4 第 3 位角色，官方公布为 2027 年初上线（具体日期待公布）；Arjun 已于 10/13 上线"
    },
-   "checked": "2026-10-12"
+   "checked": "2026-10-15"
   },
   "totalSlots": 48
  },
@@ -359,14 +362,19 @@
    "venue": "Las Vegas Convention Center"
   },
   "evo-france-2026": {
+   "champion": "Dual Kevin",
+   "championChar": "(Rashid)",
    "city": "法国 尼斯",
    "end": "2026-10-11",
    "entrants": 1071,
    "kind": "premier",
    "link": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/France",
    "name": "EVO France 2026",
-   "note": "2025 年 SF6 项目 1,669 人参赛；2026 年最终报名 1,071 人，仍为全项目人数最多的游戏。Top 8 已于日本时间 10/12 凌晨打完，最终冠亚军尚待多方来源确认（有报道称 DualKevin（Rashid）夺冠、Tachikawa（C. Viper）亚军，但细节不一致，暂不写入）。",
+   "note": "Dual Kevin（Crazy Raccoon）首次夺得 CPT Premier 冠军，直通 Capcom Cup 13；Tachikawa 亚军，Punk（Cammy）第 3、kobayan（Zangief）第 4、Hinao（Luke）第 5。最终报名 1,071 人，仍为全项目人数最多。亚军 Tachikawa 的 Capcom Cup 名额各来源说法不一（Crazy Raccoon 称双双晋级，Liquipedia 仅列冠军），暂只写入冠军。",
    "preview": "本季最后一场 CPT Premier，冠军直通 Capcom Cup 13",
+   "runnerUp": "Tachikawa",
+   "runnerUpChar": "(C. Viper)",
+   "score": "GF 3-2（败者组决赛 Tachikawa 3-1 先拿首盘，Dual Kevin 重置后 3-2 夺冠）",
    "start": "2026-10-09",
    "stream": "EVO 官方 Twitch / YouTube",
    "venue": "Palais des Expos de Nice",
@@ -382,7 +390,7 @@
      "when": "10/12（一）01:30–05:30 左右"
     }
    ],
-   "watchNote": "官方主舞台日程：SF6 Top 8 为法国夏令时 10/11（日）18:30–22:30（比日本慢 7 小时），即日本时间 10/12 凌晨 01:30–05:30；赛事已结束，冠亚军待核实。"
+   "watchNote": "赛事已结束。SF6 Top 8 为法国夏令时 10/11（日）18:30–22:30，即日本时间 10/12 凌晨。"
   },
   "evo-japan-2026": {
    "champion": "Yamaguchi",

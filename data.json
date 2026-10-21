@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "本周看点：SFL JAPAN Division F 第 4 节 10/20（二）18:40 起，Division S 第 5 节 10/23（五）18:40 起；World Warrior 其余赛区决赛陆续进行。",
+  "brief": "本周看点：SFL JAPAN Division S 第 5 节 10/23（五）18:40 起；SFL EMEAA 季后赛（伦敦）10/24（六）20:00 起，决赛在日本时间深夜至 10/25 凌晨。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-22",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-10-19 09:00",
+  "lastUpdated": "2026-10-22 09:00",
   "log": [
+   {
+    "date": "2026-10-22",
+    "text": "无重大变化，已核对 SFL JAPAN（Division F 第 4 节 10/20、Division S 第 4 节 10/16 结果暂未检到，下次复核）、World Warrior 区域决赛（暂无新冠军）、SFL EMEAA 赛程、EWC 2027 SF6 日期（仍未公布）；Tifa 仍为 2027 年初，平衡调整无官方日期。"
+   },
    {
     "date": "2026-10-19",
     "text": "无重大变化，已核对 SFL JAPAN（Division S 第 4 节 10/16 结果暂未检到，下次复核）、World Warrior 区域决赛（Asia South 之外暂无新冠军）、EWC 2027 SF6 日期（仍未公布）；Tifa 仍为 2027 年初，平衡调整无官方日期。"
@@ -205,7 +209,7 @@
     "name": "Tifa",
     "note": "Year 4 第 3 位角色，官方公布为 2027 年初上线（具体日期待公布）；Arjun 已于 10/13 上线"
    },
-   "checked": "2026-10-19"
+   "checked": "2026-10-22"
   },
   "totalSlots": 48
  },

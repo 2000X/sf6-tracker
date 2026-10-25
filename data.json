@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "本周看点：SFL JAPAN Division S 第 5 节 10/23（五）18:40 起；SFL EMEAA 季后赛（伦敦）10/24（六）20:00 起，决赛在日本时间深夜至 10/25 凌晨。",
+  "brief": "本周看点：SFL JAPAN Division F 第 5 节 10/27（二）18:40 起，Division S 第 6 节 10/30（五）18:40 起；SFL EMEAA 伦敦季后赛（10/24）结果暂未检到。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-10-22",
+   "checked": "2026-10-26",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-10-22 09:00",
+  "lastUpdated": "2026-10-26 09:00",
   "log": [
+   {
+    "date": "2026-10-26",
+    "text": "无重大变化，已核对 SFL JAPAN（第 4、5 节结果暂未检到，下次复核）、SFL EMEAA 伦敦季后赛（10/24，冠军暂未检到）、World Warrior 区域决赛（暂无新冠军）、EWC 2027 SF6 日期（仍未公布）；Tifa 仍为 2027 年初，平衡调整无官方日期。"
+   },
    {
     "date": "2026-10-22",
     "text": "无重大变化，已核对 SFL JAPAN（Division F 第 4 节 10/20、Division S 第 4 节 10/16 结果暂未检到，下次复核）、World Warrior 区域决赛（暂无新冠军）、SFL EMEAA 赛程、EWC 2027 SF6 日期（仍未公布）；Tifa 仍为 2027 年初，平衡调整无官方日期。"
@@ -209,7 +213,7 @@
     "name": "Tifa",
     "note": "Year 4 第 3 位角色，官方公布为 2027 年初上线（具体日期待公布）；Arjun 已于 10/13 上线"
    },
-   "checked": "2026-10-22"
+   "checked": "2026-10-26"
   },
   "totalSlots": 48
  },
@@ -437,7 +441,7 @@
    "kind": "team",
    "link": "https://sf.esports.capcom.com/sfl/",
    "name": "Street Fighter League JAPAN 2026",
-   "note": "12 队分 Division S / F 两组各 6 队，每组 10 节常规赛。S 组 Saishunkan Sol 熊本领跑（第 3 节后 90 分）；F 组第 3 节（10/6）RIDDLE ORDER 独得 40 分升至单独第一，Good 8 Squad 紧随其后；Division S 第 4 节（10/16）结果待核；下一节 Division F 第 4 节 10/20。",
+   "note": "12 队分 Division S / F 两组各 6 队，每组 10 节常规赛。S 组 Saishunkan Sol 熊本领跑（第 3 节后 90 分）；F 组第 3 节（10/6）RIDDLE ORDER 独得 40 分升至单独第一，Good 8 Squad 紧随其后；第 4、5 节结果待核；下一节 Division F 第 5 节 10/27。",
    "preview": "各组前三进季后赛，两组第一在总决赛对决；日本冠军队晋级 2027 年 3 月 SFL 世界锦标赛",
    "series": true,
    "stages": [
@@ -562,12 +566,12 @@
    "watch": [
     {
      "key": true,
-     "what": "Division F 第 4 节",
-     "when": "10/20（二）18:40 起"
+     "what": "Division F 第 5 节",
+     "when": "10/27（二）18:40 起"
     },
     {
-     "what": "Division S 第 5 节",
-     "when": "10/23（五）18:40 起"
+     "what": "Division S 第 6 节",
+     "when": "10/30（五）18:40 起"
     },
     {
      "what": "总决赛 · 东京 Big Sight",
@@ -582,7 +586,7 @@
    "kind": "team",
    "link": "https://www.streetfighterleague.com/street-fighter-league-emeaa-2026-playoffs-head-to-mcm-comic-con-london/",
    "name": "Street Fighter League 2026 赛区季后赛（EMEAA / Americas）",
-   "note": "EMEAA 四强队伍：GTW、Red Dunes、MVS、YESPORTS；Americas 赛区晋级队伍待定。",
+   "note": "EMEAA 伦敦季后赛 10/24 已举行（四强 GTW、Red Dunes、MVS、YESPORTS，冠军待核）；Americas 赛区晋级队伍待定。",
    "preview": "各赛区季后赛冠军队伍晋级 2027年3月的 SFL 世界锦标赛（与 Capcom Cup 13 同期在两国国技馆举行）",
    "series": true,
    "stages": [
@@ -604,10 +608,6 @@
    "watch": [
     {
      "key": true,
-     "what": "SFL EMEAA 2026 季后赛（半决赛+决赛）",
-     "when": "10/24（六）20:00 起"
-    },
-    {
      "tentative": true,
      "what": "SFL Americas 2026 决赛",
      "when": "11/9（一）11:30 左右"

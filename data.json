@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "本周看点：SFL JAPAN Division S 第 7 节 11/6（五）18:40 起；SFL Americas 决赛 11/9（一）11:30 左右（预估）；Division F 第 7 节 11/10（二）18:40 起。EWC 2027 的 SF6 日期仍未公布。",
+  "brief": "今天 SFL Americas 决赛 11/9（一）11:30 左右（预估）开打；Division F 第 7 节 11/10（二）18:40 起，Division S 第 8 节 11/13（五）18:40 起。EMEAA 冠军 Red Dunes 已晋级 SFL 世界赛。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-11-05",
+   "checked": "2026-11-09",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-11-05 08:55",
+  "lastUpdated": "2026-11-09 08:55",
   "log": [
+   {
+    "date": "2026-11-09",
+    "text": "SFL EMEAA 伦敦季后赛结果：Red Dunes 70-30 击败 GTW 夺冠，晋级 3 月 SFL 世界锦标赛。SFL JAPAN Division S 第 6、7 节与 Division F 第 4–6 节结果暂未检到；EWC 2027 SF6 日期仍未公布，Tifa 仍为 2027 年初，平衡调整无官方日期。"
+   },
    {
     "date": "2026-11-05",
     "text": "无重大变化，已核对 SFL JAPAN（Division F 第 4–6 节、Division S 第 6 节结果暂未检到，下次复核）、SFL EMEAA 伦敦季后赛（冠军暂未检到）、World Warrior 区域决赛（暂无新冠军）、EWC 2027 SF6 日期（仍未公布）；Tifa 仍为 2027 年初，平衡调整无官方日期。"
@@ -225,7 +229,7 @@
     "name": "Tifa",
     "note": "Year 4 第 3 位角色，官方公布为 2027 年初上线（具体日期待公布）；Arjun 已于 10/13 上线"
    },
-   "checked": "2026-11-05"
+   "checked": "2026-11-09"
   },
   "totalSlots": 48
  },
@@ -598,7 +602,7 @@
    "kind": "team",
    "link": "https://www.streetfighterleague.com/street-fighter-league-emeaa-2026-playoffs-head-to-mcm-comic-con-london/",
    "name": "Street Fighter League 2026 赛区季后赛（EMEAA / Americas）",
-   "note": "EMEAA 伦敦季后赛 10/24 已举行（四强 GTW、Red Dunes、MVS、YESPORTS，冠军待核）；Americas 赛区晋级队伍待定。",
+   "note": "EMEAA 伦敦季后赛 10/24 已结束：Abu Dhabi 的 Red Dunes 在总决赛 70-30 击败 GTW 夺冠，晋级 3/10–14 的 SFL 世界锦标赛（奖金 $60,000）；Americas 赛区决赛 11/9 举行，晋级队伍待定。",
    "preview": "各赛区季后赛冠军队伍晋级 2027年3月的 SFL 世界锦标赛（与 Capcom Cup 13 同期在两国国技馆举行）",
    "series": true,
    "stages": [

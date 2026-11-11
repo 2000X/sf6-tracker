@@ -1,9 +1,9 @@
 {
  "status": {
-  "brief": "今天 SFL Americas 决赛 11/9（一）11:30 左右（预估）开打；Division F 第 7 节 11/10（二）18:40 起，Division S 第 8 节 11/13（五）18:40 起。EMEAA 冠军 Red Dunes 已晋级 SFL 世界赛。",
+  "brief": "SFL Americas 已决出冠军：巴西 2GAME 70-20 击败 Bandits，晋级 3 月世界锦标赛（与 EMEAA 冠军 Red Dunes 同行）；SFL JAPAN Division S 第 8 节 11/13（五）18:40 起。",
   "ccNote": "名额来自 8 场 Premier 冠军、Premier 积分榜、25 个 World Warrior 赛区决赛，以及 Capcom Cup 12、SFL 世界赛和 EWC 冠军。这里只列已公开确认的名额，积分和赛区名额会在赛季末陆续补齐。",
   "ewc": {
-   "checked": "2026-11-09",
+   "checked": "2026-11-12",
    "edition": "EWC 2027",
    "emptyNote": "还没有选手获得 EWC 2027 名额。CPT 2027 赛季规则和 Road to EWC 预选赛公布后，名额会在这里逐一列出。",
    "facts": [
@@ -89,8 +89,12 @@
    ],
    "slotsTotal": null
   },
-  "lastUpdated": "2026-11-09 08:55",
+  "lastUpdated": "2026-11-12 09:10",
   "log": [
+   {
+    "date": "2026-11-12",
+    "text": "SFL Americas 帕萨迪纳决赛：2GAME 70-20 击败 Bandits 夺冠，晋级 SFL 世界锦标赛（3/12、3/14 东京两国国技馆）。SFL JAPAN Division S 第 6、7 节与 Division F 第 4–7 节结果暂未检到（官方站无法访问）；EWC 2027 SF6 日期仍未公布，Tifa 仍为 2027 年初，平衡调整无官方日期。"
+   },
    {
     "date": "2026-11-09",
     "text": "SFL EMEAA 伦敦季后赛结果：Red Dunes 70-30 击败 GTW 夺冠，晋级 3 月 SFL 世界锦标赛。SFL JAPAN Division S 第 6、7 节与 Division F 第 4–6 节结果暂未检到；EWC 2027 SF6 日期仍未公布，Tifa 仍为 2027 年初，平衡调整无官方日期。"
@@ -229,7 +233,7 @@
     "name": "Tifa",
     "note": "Year 4 第 3 位角色，官方公布为 2027 年初上线（具体日期待公布）；Arjun 已于 10/13 上线"
    },
-   "checked": "2026-11-09"
+   "checked": "2026-11-12"
   },
   "totalSlots": 48
  },
@@ -602,7 +606,7 @@
    "kind": "team",
    "link": "https://www.streetfighterleague.com/street-fighter-league-emeaa-2026-playoffs-head-to-mcm-comic-con-london/",
    "name": "Street Fighter League 2026 赛区季后赛（EMEAA / Americas）",
-   "note": "EMEAA 伦敦季后赛 10/24 已结束：Abu Dhabi 的 Red Dunes 在总决赛 70-30 击败 GTW 夺冠，晋级 3/10–14 的 SFL 世界锦标赛（奖金 $60,000）；Americas 赛区决赛 11/9 举行，晋级队伍待定。",
+   "note": "EMEAA 伦敦季后赛（10/24）：Red Dunes 70-30 击败 GTW 夺冠；Americas 帕萨迪纳（11/8 当地）：巴西 2GAME 以第 3 种子 70-20 击败头号种子 Bandits 夺冠，两队均晋级 3/12、3/14 在东京两国国技馆举行的 SFL 世界锦标赛（奖金 $60,000），日本赛区冠军待定。",
    "preview": "各赛区季后赛冠军队伍晋级 2027年3月的 SFL 世界锦标赛（与 Capcom Cup 13 同期在两国国技馆举行）",
    "series": true,
    "stages": [
@@ -613,9 +617,9 @@
     },
     {
      "date": "2026-11-09",
-     "name": "Americas 决赛 · 帕萨迪纳",
-     "tentative": true,
-     "time": "11:30 左右"
+     "name": "Americas 决赛 · 帕萨迪纳（当地 11/8）",
+     "time": "11:30 左右",
+     "tentative": true
     }
    ],
    "start": "2026-10-24",
@@ -624,12 +628,12 @@
    "watch": [
     {
      "key": true,
-     "tentative": true,
-     "what": "SFL Americas 2026 决赛",
-     "when": "11/9（一）11:30 左右"
+     "what": "SFL 世界锦标赛（与 Capcom Cup 13 同期，东京两国国技馆）",
+     "when": "3/12（五）、3/14（日）",
+     "tentative": true
     }
    ],
-   "watchNote": "EMEAA 决赛为伦敦当地时间 10/24 12:00–18:00（BST，比日本慢 8 小时），换算为日本时间 10/24 20:00–次日 2:00；Americas 决赛为美国太平洋标准时间 11/8 18:30 开打（11 月初已转冬令时），日本时间早 17 小时，即 11/9（一）11:30 左右，具体以官方公布为准。"
+   "watchNote": "两个赛区季后赛均已结束；世界锦标赛日期来自官方赛区战报，具体时段待公布。"
   },
   "topanga-7": {
    "champion": "MenaRD",
